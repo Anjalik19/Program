@@ -20,7 +20,7 @@ try{
 console.log('hello username..how r u?');
 let name=readline.question("enter the name:");
 let replace=readline.question('enter the string you want to replace:')
-let output=util.strngs(replace,name);
+let output=util.strngs(replacestring,name);
 console.log("after replacement:",output);
 }
 catch(err)

@@ -231,8 +231,8 @@ catch(err)
      *@param {string} Taking value for b and c
      *@return {string} replacing values.
      */
-    exports.strngs = (b, c) => {
-        let d = b.replace(c, b);
+    exports.strngs = (name, stringRepalce) => {
+        let d = name.replace(stringRepalce, name);
         let output = ("hello " + d + "..how r u?");
         return output;
     }
