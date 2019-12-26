@@ -304,7 +304,9 @@ exports.palindrome=(str)=>
 
     }
     /**
-     * 
+     * find the Prime numbers in given range and print them in 2d array.
+     * @param {number} taking number from 0-1000.
+     * @return {number} return prime number.
      */
     exports.array2D=(rows,cols)=>
     {
