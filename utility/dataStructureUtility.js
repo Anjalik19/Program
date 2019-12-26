@@ -308,7 +308,7 @@ exports.palindrome=(str)=>
      * @param {number} taking number from 0-1000.
      * @return {number} return prime number.
      */
-    exports.array2D=(rows,cols)=>
+    exports.array2D=(n)=>
     {
         function isPrime(n) {
             if (n == 0 || n == 1) {
@@ -321,7 +321,7 @@ exports.palindrome=(str)=>
               }
               return true;
             }
-            let a=[];
+            let a=[[]];
             let k = 0;
             for (let i = 0; i < 10; i++) {
                 a[i]=[10];
