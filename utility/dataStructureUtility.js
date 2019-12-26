@@ -303,8 +303,10 @@ exports.palindrome=(str)=>
         }
 
     }
-    
-    exports.array2D=(n)=>
+    /**
+     * 
+     */
+    exports.array2D=(rows,cols)=>
     {
         function isPrime(n) {
             if (n == 0 || n == 1) {

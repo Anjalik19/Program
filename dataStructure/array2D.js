@@ -16,5 +16,8 @@
 ******************************************************************************/
 const readline = require("readline-sync");
 let util = require("../utility/dataStructureUtility");
+let rows = readline.question("enter the rows:");
+let cols = readline.question("enter the cols:");
+
 let n;
-let result=util.array2D(n);
+let result=util.array2D(rows,cols);
