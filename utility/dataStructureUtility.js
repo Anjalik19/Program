@@ -338,7 +338,9 @@ exports.palindrome=(str)=>
                 }
             }
     /**
-     * 
+     * takes the month and year and prints the Calendar of the month. 
+     * @param {number} values for month and year
+     * @return calander
      */
     exports.calander=()=>{
         const readline = require("readline-sync");
