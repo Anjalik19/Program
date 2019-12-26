@@ -16,4 +16,4 @@
 ******************************************************************************/
 let readline=require("readline-sync");
 let util=require("../utility/algorithmUtility");
-let output=util.primeNum();
+util.primeNum();
