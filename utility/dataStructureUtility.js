@@ -5,6 +5,7 @@
  * @return {string} if it found then remove the word from the List and then return the list.
  * @return {string} In the end save the list into a file
  */
+/*
 exports.unOrderedList = (stringArray, searchElement) => {
     let list = new linkedList;
     for (let i = 0; i < stringArray.length; i++) {
@@ -99,6 +100,7 @@ function writeFile(fileName, data) {
         }
     });
 }
+*/
 
 /**
  * Read a List of Numbers from a file and arrange it in ascending Order.
@@ -311,7 +313,72 @@ exports.palindrome=(str)=>
      */
     exports.array2D=(n)=>
     {
-        function isPrime(n) {
+
+  var N=1000;
+	var prime=new Array(10);
+  for(var i=0;i<100;i++){
+    prime[i]=new Array(100);
+  }
+  for(var i=0;i<10;i++) {			
+			for(var j=0;j<100;j++) {
+				prime[i][j]=0;
+			} 
+		}
+	function checkIfPrime(key) {
+		var i,j;		
+		
+		for(i=0;prime[i][j]!=0;i++) {
+			for(j=0;prime[i][j]!=0;j++) {
+				if(key%prime[i][j]==0) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+		prime[0][0]=2;
+		prime[0][1]=3;
+		var number=6;
+
+		var i=0;
+
+		for(var j=2;number<=N;) {
+			if(checkIfPrime((number-=1))) {
+				
+				if(number>100*(i+1)||j>=100) {
+					i++;
+					j=0;
+				}
+				prime[i][j]=number;
+				j++;
+
+			}
+			if(checkIfPrime((number+=2))){
+            if(number>100*(i+1)||j>=100) {
+					i++;
+					j=0;
+				}
+				prime[i][j]=number;
+				j++;
+
+			}
+			
+			number+=5;
+			if(number>100*(i+1)) {
+				i++;
+				j=0;
+			}
+		}		
+		
+		for(i=0;i<10;i++) {
+			console.log("<br></br>");
+			for(var j=0;j<100;j++) {
+				if(prime[i][j]!=0)
+				console.log(prime[i][j]+" ");
+			} 
+        }
+    }
+       /* function isPrime(n) {
             if (n == 0 || n == 1) {
                 return false;
               }
@@ -338,6 +405,7 @@ exports.palindrome=(str)=>
               console.log(" ");
                 }
             }
+            */
     /**
      * takes the month and year and prints the Calendar of the month. 
      * @param {number} values for month and year
@@ -370,7 +438,7 @@ exports.palindrome=(str)=>
             
             console.log( " " + months[month] + " " + year);
             console.log("S M Tu W Th F S");
-            let x=day(month,1,year)
+            let x=day(month,1,year);
     
             for(let i=0;i<x;i++){
               console.log(" ");

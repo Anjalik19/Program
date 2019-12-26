@@ -19,8 +19,8 @@ let util=require("../utility/functionalUtility");
 try{
 console.log('hello username..how r u?');
 let name=readline.question("enter the name:");
-let replace=readline.question('enter the string you want to replace:')
-let output=util.strngs(replacestring,name);
+let stringReplace=readline.question('enter the string you want to replace:')
+let output=util.strngs(stringReplace,name);
 console.log("after replacement:",output);
 }
 catch(err)

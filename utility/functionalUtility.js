@@ -232,7 +232,7 @@ catch(err)
      *@return {string} replacing values.
      */
     exports.strngs = (name, stringRepalce) => {
-        let d = name.replace(stringRepalce, name);
-        let output = ("hello " + d + "..how r u?");
+        let afterReplace = name.replace(stringRepalce, name);
+        let output = ("hello " + afterReplace + "..how r u?");
         return output;
     }
