@@ -21,4 +21,3 @@ console.log(stringArr)
 let searchword=readline.question("enter the string:");
 let result=util.binary(stringArr,searchword);
 console.log("element found at:",stringArr,searchword);
-console.log(result);
