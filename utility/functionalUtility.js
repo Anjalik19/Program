@@ -125,20 +125,20 @@ catch(err)
      * @param {number} taking the value of num from user.
      * @return {number} return the result.
      */
-    exports.powerof = (num) => {
+    exports.powerof = (number) => {
         try {
             let i = 0;
             let power = 1;
-            console.log("power of 2^" + num);
-            while (i <= num) {
+            console.log("power of 2^" + number);
+            while (i <= number) {
                 console.log("2^ " + i + "=" + power);
                 power = power * 2;
                 i++;
 
             }
         }
-        catch (e) {
-            console.log(e);
+        catch (err) {
+            console.log(err);
         }
     },
     /**

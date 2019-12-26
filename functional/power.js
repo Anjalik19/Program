@@ -18,8 +18,8 @@
 let readline=require("readline-sync");
 let util=require("../utility/functionalUtility");
 try{
-let num=readline.question("enter the value:");
-let result=util.powerof(num);
+let number=readline.question("enter the value:");
+let result=util.powerof(number);
 console.log("result is:",result);
 }
 catch(e)

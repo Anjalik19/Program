@@ -55,10 +55,10 @@ exports.sort = (arr) => {
     }
 /**
  * Program to find Word from Word List using Binary Search.
- * @param {string} Read in a list of words
- * @param {string} prompt the user to enter a word to search the list
- * @param {string} Use Arrays to sort the word list and then do the binary search
- * @return {string} Print the result if the word is found
+ * @param {string} Read in a list of words.
+ * @param {string} prompt the user to enter a word to search the list.
+ * @param {string} Use Arrays to sort the word list and then do the binary search.
+ * @return {string} Print the result if the word is found.
  */
 
 exports.binary = (stringArr, searchword) => {
