@@ -257,23 +257,32 @@ exports.cashCounter = (choice) => {
         }
 
     }
-}
+},
 /**
- * 
+ * Program to push open parenthesis “(“ and pop closed parenthesis “)” in stack.
+ * @param Take an Arithmetic Expression
+ * @return Arithmetic Expression is balanced or not
  */
-balancedParentheses = (string) => {
+exports.balancedParentheses = (string) => {
     let ch;
     let stack = [];
     for (let i = 0; i < string.length; i++)
         ch = string.charAt(i);
-    if (ch == '(' || ch=='{' || ch=='[') {
+    if (ch == '(') {
         stack.push(ch);
     }
     else {
-        if (ch == ')' || ch=='}' || ch==']') {
+        if (ch == ')') {
             stack.pop;
         }
    
     return stack;
 }
+},
+/**
+ * 
+ */
+exports.palindrome=()=>
+{
+
 }
