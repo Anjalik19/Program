@@ -5,7 +5,6 @@
  * @return {string} if it found then remove the word from the List and then return the list.
  * @return {string} In the end save the list into a file
  */
-/*
 exports.unOrderedList = (stringArray, searchElement) => {
     let list = new linkedList;
     for (let i = 0; i < stringArray.length; i++) {
@@ -100,9 +99,11 @@ function writeFile(fileName, data) {
         }
     });
 }
-*/
+
 /**
- * 
+ * Read a List of Numbers from a file and arrange it in ascending Order.
+ * @param {number} taking integers in list
+ * @return {number} inset or delete operation
  */
 exports.orderedList = (arr, searchElement) => {
     let list = new linkedList;
