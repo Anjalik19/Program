@@ -16,6 +16,7 @@
 ******************************************************************************/
 let readline=require("readline-sync");
 let util=require("../utility/algorithmUtility");
+try{
 let arr=[];
 let size=readline.question("enter the size of array:")
 let i;
@@ -24,3 +25,8 @@ arr[i]=readline.question("enter array element:",(i+1));
 console.log("Before sorting the array is:",arr);
 let sortedArray=util.sort(arr);
 console.log("After sorting the array is:",sortedArray);
+}
+catch(err)
+{
+    console.log(err);
+}
