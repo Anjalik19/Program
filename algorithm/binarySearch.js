@@ -16,7 +16,7 @@
 ******************************************************************************/
 let readline=require("readline-sync");
 let util=require("../utility/algorithmUtility");
-let stringArr=["how","are","you"];
+let stringArr=["hello","how","are","you"];
 console.log(stringArr)
 let searchword=readline.question("enter the string:");
 let result=util.binary(stringArr,searchword);
