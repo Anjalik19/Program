@@ -282,7 +282,23 @@ exports.balancedParentheses = (string) => {
 /**
  * 
  */
-exports.palindrome=()=>
+exports.palindrome=(str)=>
 {
+         let deque = new deque();
+        for (let i=str.length-1;i>=0;i--) {
+            deque.addFirst(str.charAt(i));
+        }
+        let reverse="";
+        for(let i=0;i<str.length;i++) {
+            let ch=deque.removeLast();
+            reverse+=ch;
+        }
+        if(str.equals(reverse)) {
+            console.log("palindrome");
+        }
+        else {
+            console.log("not palindrome");
+        }
 
-}
+    }
+    
