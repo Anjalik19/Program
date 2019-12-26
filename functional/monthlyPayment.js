@@ -17,9 +17,9 @@
 let readline=require("readline-sync");
 let util=require("../utility/functionalUtility");
 try{
-let principal=readline.question("enter the value of p:");
-let year=readline.question("enter the value of y:");
-let Rate=readline.question("enter the value of R:");
+let principal=readline.question("enter the value of principal:");
+let year=readline.question("enter the value of year:");
+let Rate=readline.question("enter the value of Rate:");
 let Payment=util.payments(principal,year,Rate);
 console.log("Monthly payment is:",Payment);
 }
