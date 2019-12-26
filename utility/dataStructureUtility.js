@@ -280,7 +280,9 @@ exports.balancedParentheses = (string) => {
 }
 },
 /**
- * 
+ * Program to check a string is palindrome or not.
+ * @param {string} Taking input from the user.
+ * @return true if it is a palindrome or return false.
  */
 exports.palindrome=(str)=>
 {
