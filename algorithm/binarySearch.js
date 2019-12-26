@@ -16,8 +16,14 @@
 ******************************************************************************/
 let readline=require("readline-sync");
 let util=require("../utility/algorithmUtility");
+try{
 let stringArr=["hello","how","are","you"];
 console.log(stringArr)
 let searchword=readline.question("enter the string:");
 let result=util.binary(stringArr,searchword);
 console.log("element found at:",stringArr,searchword);
+}
+catch(err)
+{
+    console.log(err);
+}
