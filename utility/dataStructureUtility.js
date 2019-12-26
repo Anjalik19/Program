@@ -313,72 +313,7 @@ exports.palindrome=(str)=>
      */
     exports.array2D=(n)=>
     {
-
-  var N=1000;
-	var prime=new Array(10);
-  for(var i=0;i<100;i++){
-    prime[i]=new Array(100);
-  }
-  for(var i=0;i<10;i++) {			
-			for(var j=0;j<100;j++) {
-				prime[i][j]=0;
-			} 
-		}
-	function checkIfPrime(key) {
-		var i,j;		
-		
-		for(i=0;prime[i][j]!=0;i++) {
-			for(j=0;prime[i][j]!=0;j++) {
-				if(key%prime[i][j]==0) {
-					return false;
-				}
-			}
-		}
-		return true;
-	}
-		prime[0][0]=2;
-		prime[0][1]=3;
-		var number=6;
-
-		var i=0;
-
-		for(var j=2;number<=N;) {
-			if(checkIfPrime((number-=1))) {
-				
-				if(number>100*(i+1)||j>=100) {
-					i++;
-					j=0;
-				}
-				prime[i][j]=number;
-				j++;
-
-			}
-			if(checkIfPrime((number+=2))){
-            if(number>100*(i+1)||j>=100) {
-					i++;
-					j=0;
-				}
-				prime[i][j]=number;
-				j++;
-
-			}
-			
-			number+=5;
-			if(number>100*(i+1)) {
-				i++;
-				j=0;
-			}
-		}		
-		
-		for(i=0;i<10;i++) {
-			console.log("<br></br>");
-			for(var j=0;j<100;j++) {
-				if(prime[i][j]!=0)
-				console.log(prime[i][j]+" ");
-			} 
-        }
-    }
-       /* function isPrime(n) {
+       function isPrime(n) {
             if (n == 0 || n == 1) {
                 return false;
               }
@@ -396,16 +331,16 @@ exports.palindrome=(str)=>
               for (let j = 0; j < 100; j++) {
                   a[i][j]=[10][100];
                 if (isPrime(k)) {
-                  console.log("" + k);
+                  process.stdout.write(""+ k);
                   k++;
                 } else {
                   k++;
                 }
               }
-              console.log(" ");
+              process.stdout.write(" ");
                 }
             }
-            */
+            
     /**
      * takes the month and year and prints the Calendar of the month. 
      * @param {number} values for month and year
