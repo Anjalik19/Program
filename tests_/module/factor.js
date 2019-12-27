@@ -1,11 +1,11 @@
-let add = function (x, y) {
-    console.log("value of x: " + x + " and value of y: " + y);
+let fact = function (num) {
+    console.log("value for number is:",num);
     return new promise(function (resolve, reject) {
         if (x < 0) {
             reject("x should be greater then 0")
         } else {
-            resolve(x + y)
+            resolve(num)
         }
     })
 }
-exports.add = add;
+exports.fact = fact;

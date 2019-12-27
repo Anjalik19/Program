@@ -1,17 +1,17 @@
 let chai=require('chai');
 let expect=chai.expect;
-let addition=require("../modules/addition")
-describe('addition', ()=>{
-    it('it should add 2 nos', (done)=>{
-        addition.add(1,4).then(function(result){
-            expect(result).to.equal(5);
+let factor=require("../modules/factor")
+describe('factor', ()=>{
+    it('it should give factor of number', (done)=>{
+        factor.fact(5).then(function(result){
+            expect(result).to.equal(120);
             done();
         }).catch(function(err){
             done(err)
         })
     });
     it('it should reject', (done)=>{
-        addition.add(1,4).catch(function(err){
+        factor.fact(5).catch(function(err){
             expect(err).to.equal("x should be greater then 00");
         })
         .then(function(){done()})

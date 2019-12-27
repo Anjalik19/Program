@@ -5,9 +5,10 @@
  * @return {string} if it found then remove the word from the List and then return the list.
  * @return {string} In the end save the list into a file
  */
-/*
+
 exports.unOrderedList = (stringArray, searchElement) => {
     let list = new linkedList;
+
     for (let i = 0; i < stringArray.length; i++) {
         list.add(stringArray[i]);
     }
@@ -100,7 +101,7 @@ function writeFile(fileName, data) {
         }
     });
 }
-*/
+
 
 /**
  * Read a List of Numbers from a file and arrange it in ascending Order.
@@ -109,6 +110,7 @@ function writeFile(fileName, data) {
  */
 exports.orderedList = (arr, searchElement) => {
     let list = new linkedList;
+    arr=list.sort(arr);
     for (let i = 0; i < arr.length; i++) {
         list.add(arr[i]);
     }
@@ -138,7 +140,7 @@ class linkedList {
     sort(arr) {
         for (let i = 0; i < arr.length - 1; i++) {
             for (let j = 0; j < arr.length - 1 - i; j++) {
-                if (arr[j] > arr[j + 1]) {
+                if (Number(arr[j] > Number(arr[j + 1]))) {
                     let temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
@@ -164,7 +166,7 @@ class linkedList {
         let previousNode = null;
         while (presentNode != null) {
             if (presentNode.searchElement === searchElement) {
-                if (previous == null) {
+                if (previousNode == null) {
                     this.head = presentNode.next;
                 }
                 else {
@@ -220,7 +222,9 @@ function writeFile(fileName, data) {
  * @return {number} return output
  */
 exports.cashCounter = (choice) => {
+    const readline = require("readline-sync");
     let balance = 5000, withdraw, deposite;
+    atm(choice);
     function get_balance() {
         console.log("your current balance is:", balance);
         atm();
@@ -244,7 +248,7 @@ exports.cashCounter = (choice) => {
             atm();
         }
     }
-    function atm() {
+    function atm(choice) {
         if (choice == 1) {
             get_balance();
         }
@@ -279,7 +283,7 @@ exports.balancedParentheses = (string) => {
             stack.pop;
         }
    
-    return stack;
+    return stack.length;
 }
 },
 /**
@@ -329,7 +333,7 @@ exports.palindrome=(str)=>
             for (let i = 0; i < 10; i++) {
                 a[i]=[10];
               for (let j = 0; j < 100; j++) {
-                  a[i][j]=[10][100];
+             
                 if (isPrime(k)) {
                   process.stdout.write(""+ k);
                   k++;
