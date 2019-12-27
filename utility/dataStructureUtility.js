@@ -127,6 +127,7 @@ exports.orderedList = (arr, searchElement) => {
     writeFile("../../program.txt", elementWrite);
 }
 class Node {
+
     constructor(searchElement) {
         this.searchElement = searchElement;
         this.next = null;
@@ -336,13 +337,13 @@ exports.palindrome=(str)=>
               for (let j = 0; j < 100; j++) {
              
                 if (isPrime(k)) {
-                  process.stdout.write(""+ k);
+                  console.log(""+ k);
                   k++;
                 } else {
                   k++;
                 }
               }
-              process.stdout.write(" ");
+             console.log(" ");
                 }
             }
             
