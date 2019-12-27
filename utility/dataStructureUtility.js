@@ -1,9 +1,9 @@
 /**
  * Read the Text from a file, split it into words and arrange it as Linked List. 
  * @param {string} Take a user input to search a Word in the List.
- * @return {string} If the Word is not found then add it to the list and return the list.
- * @return {string} if it found then remove the word from the List and then return the list.
- * @return {string} In the end save the list into a file
+ * @param {string} Taking string array as input.
+ * @param {string} Taking input element which you want to search.
+ * @return {string} return the result.
  */
 
 exports.unOrderedList = (stringArray, searchElement) => {
@@ -106,7 +106,8 @@ function writeFile(fileName, data) {
 /**
  * Read a List of Numbers from a file and arrange it in ascending Order.
  * @param {number} taking integers in list
- * @return {number} inset or delete operation
+ * @param {number} Taking input form user to search element.
+ * @return {number} return result.
  */
 exports.orderedList = (arr, searchElement) => {
     let list = new linkedList;
