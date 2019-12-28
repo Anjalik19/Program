@@ -12,19 +12,18 @@ for(let i=0;i<length;i++)
     let weight=data.Rice[i].weight;
     let price=data.Rice[i].price;
     count+=data.Rice[i].price;
-    console.log("price of each rice is:",price);
+    console.log("price of each rice is:",name +":"+price);
 }
 console.log("Total price of rice is:",count);
 console.log("-----------Pulses--------------");
 let lengths=data.Pulses.length;
-count=0;
 for(let j=0;j<lengths;j++)
 {
     let name=data.Pulses[j].name;
     let weigth=data.Pulses[j].weight;
     let price=data.Pulses[j].price;
     count=count+data.Pulses[j].price;
-    console.log("price of each pulses is:",price);
+    console.log("price of each pulses is:",name +":"+price);
 }
 console.log("Total price of pulses is:",count);
 console.log("-----------Wheat-------------");
@@ -35,6 +34,6 @@ let name=data.Wheats[k].name;
 let weight=data.Wheats[k].weight;
 let price=data.Wheats[k].price;
 count+=count+data.Wheats[k].price;
-console.log("price of each weight is:",price);
+console.log("price of each weight is:",name +":"+price);
 }
 console.log("Total price of wheats is:",count);

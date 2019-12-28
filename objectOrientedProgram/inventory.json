@@ -48,25 +48,25 @@
     ],
     "Wheats":[
         {
-            "name":"bread wheat",
+            "name":"Emmer",
             "weight":40,
             "price":600
         },
         {
 
-            "name":"Corn flour",
+            "name":"Common wheat",
             "weight":20,
             "price":350
         },
         {
 
-            "name":"Pillsbury Flour",
+            "name":"Spelt",
             "weight":50,
             "price":600
         },
         {
 
-            "name":"Multigrain flour",
+            "name":"Durum",
             "weight":35,
             "price":200
         }
