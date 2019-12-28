@@ -1,3 +1,19 @@
+/******************************************************************************
+* Execution : 1. default node cmd> node inventoryDataManagement.js
+*             2. if nodemon installed cmd> nodemon inventoryDataManagement.js
+* 
+* Purpose   : Create a JSON file having Inventory Details for Rice, Pulses and Wheats 
+* 
+* @description 
+* 
+* @file     : inventoryDataManagement.js
+* @overview : Create a JSON file having Inventory Details for Rice, Pulses and Wheats and output the JSON String.
+* @module   : inventoryDataManagement- This is optional if expeclictly its an npm or local package
+* @author   : Anjali<anjali.march19@gmail.com>
+* @version  : 1.0
+* @since    : 28-11-2019
+*
+******************************************************************************/
 const readline = require("readline-sync");
 const fs = require("fs");
 let content=fs.readFileSync('./inventory.json');
