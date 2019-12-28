@@ -1,0 +1,34 @@
+{
+    "address_book":
+    [
+        {
+            "first_name":"Prashant",
+            "last_name":"kumar",
+            "address":"234 b",
+            "state":"Haryana",
+            "city":"Karnal",
+            "pincode":132122,
+            "phone_number":9876543144
+        },
+        {
+
+            "first_name":"Anuj",
+            "last_name":"kumar",
+            "address":"21/3 hudda sector 11",
+            "state":"Haryana",
+            "city":"Panipat",
+            "pincode":132103,
+            "phone_number":9725389330
+        },
+        {
+
+            "first_name":"Ashish",
+            "last_name":"kumar",
+            "address":"22 4th cross",
+            "state":"UP",
+            "city":"lucknow",
+            "pincode":226001,
+            "phone_number":9034282805
+        }
+    ]
+}

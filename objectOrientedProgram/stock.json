@@ -4,17 +4,17 @@
     {
         "stock_name":"common stocks",
         "number_of_share":10,
-        "share_price":220
+        "share_price":2200
     },
     {
         "stock_name":"Hybrid Stocks",
         "number_of_share":30,
-        "share_price":250.4
+        "share_price":2500.5
     },
     {
         "stock_name":"Growth Stocks",
         "number_of_share":15,
-        "share_price":300
+        "share_price":3050
 
     }
     ]
