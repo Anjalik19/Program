@@ -1,10 +1,12 @@
+let readline = require("readline-sync")
+let fs = require('fs')
 class address
 {
 constructor(addressBook)
 {
     this.addressBook;
 }
-newAddress=(address_book)=>
+newAddress=(addressbook)=>
 {
     let name = read.question("enter first name:");
     let lastname = read.question("enter last name:");
@@ -22,8 +24,29 @@ newAddress=(address_book)=>
             "city":city,
             "pincode":pincode,
             "phone_number":phonenumber
+        });
+       
+    }
+    writeFile=(fileName, data)=> {
+        let fs = require('fs');
+        fs.writeFile(addressBook.json, JSON.stringify(addressBook), function (err) {
+            if (err) {
+                console.log(err);
+            }
+        });
+        console.log("*******Address update succesfully******");
+        console.log("address information as per record:\nfirstName:  ${name}   \nlastname: ${lastname}  \naddress: ${address} \ncity: ${city}  \nstate ${state} \npincode: ${zip}  \nphone number: ${phonenumber}");
+        return [name, lastname,address,state, city, pincode, phonenumber];
+    }
+    showDetails(addressBook) {
+        if (addressBook.address_book.length > 0) {
+            for (let i = 0; i < addressBook.address_book.length; i++) {
+                console.log(addressBook.address_book[i]);
+            }
         }
-    )
+       
+    }
+    
 }
-}
+
 
