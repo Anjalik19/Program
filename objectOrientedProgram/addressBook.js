@@ -29,7 +29,7 @@ switch(option)
 {
     case 1:(option=="1")
     {
-        newAddress();
+        Address();
     }
     case 2:
         (option==2)
@@ -50,15 +50,15 @@ switch(option)
     }
     break;
 }
-newAddress(addressbook) 
+function Address(addressbook) 
     {
-        let name = read.question("enter first name:");
-        let lastname = read.question("enter last name:");
+        let name = readline.question("enter first name:");
+        let lastname = readline.question("enter last name:");
         let address = readline.question("enter the address:")
-        let state = read.question("enter the state:");
-        let city = read.question("enter the city:");
-        let pincode = read.question("enter the pincode:");
-        let phonenumber = read.question("enter your phonenumber:");
+        let state = readline.question("enter the state:");
+        let city = readline.question("enter the city:");
+        let pincode = readline.question("enter the pincode:");
+        let phonenumber = readline.question("enter your phonenumber:");
         addressbook.address_book.push(
             {
                 "first_name": name,
@@ -81,18 +81,10 @@ newAddress(addressbook)
         });
         console.log("Address update succesfully");
     }
-    showDetails(addressbook)
-     {
-        if (addressbook.address_book.length > 0) {
-            for (let i = 0; i < addressbook.address_book.length; i++) {
-                console.log(addressbook.address_book[i]);
-            }
-        }
 
-    }
-remove(addressbook)
+function remove(addressbook)
 {
-    let delete1 = read.question("Please enter the index you want to delete: ");
+    let delete1 = readline.question("Please enter the index you want to delete: ");
     delete addressbook.address_book[delete1];
     for (let i = 0; i < addressbook.address_book.length; i++) {
         if (addressbook.address_book[i] == null) {
@@ -104,7 +96,7 @@ remove(addressbook)
         console.log('Done!')
     })
 }
-modify(addressbook)
+function modify(addressbook)
 {
     console.log("please enter your choice:");
     console.log("1.To modify Address");
@@ -112,14 +104,23 @@ modify(addressbook)
     console.log("3.To modify City");
     console.log("4.To modify Pincode");
     console.log("5.To modify Phone Number");
-    let option=require.questionInt("enter your choice:");
+    let option=readline.questionInt("enter your choice:");
+    for(let i=0;i<addressbook.address_book.length;i++)
+    {
     switch(option)
     {
         case 1:
+            let obj = {
+                "Name":addressbook.address_book[i].name,
+                "LastName": addressbook.address_book[i].LastName,
+                "Address": addressbook.address_book[i].address,
+            }
+            addressbook.address_book[i] = obj;
             case 2:
                 case 3:
                     
     }
+}
 }
 
 
