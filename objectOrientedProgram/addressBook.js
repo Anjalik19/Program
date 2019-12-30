@@ -71,7 +71,7 @@ function Address(addressbook)
             });
 
     }
-    fs.writeFile(addressbook.json, JSON.stringify(addressbook))
+    fs.writeFile(filename,data)
     {
         let fs = require('fs');
         fs.writeFile(addressbook.json, JSON.stringify(addressbook), function (err) {
@@ -110,18 +110,65 @@ function modify(addressbook)
     switch(option)
     {
         case 1:
+            let address=readline.question("enter th e address:");
             let obj = {
                 "Name":addressbook.address_book[i].name,
                 "LastName": addressbook.address_book[i].LastName,
                 "Address": addressbook.address_book[i].address,
             }
             addressbook.address_book[i] = obj;
+            save();
+            break;
+
             case 2:
+                let state=readline.question("enter the state name:");
+                obj={
+                    "state":addressbook.address_book[i].state
+                }
+                addressbook.address_book[i]=obj;
+                save();
+                break;
+
                 case 3:
+                    let city=readline.question("enter the city name:");
+                obj={
+                    city:addressbook.address_book[i].city
+                }
+                addressbook.address_book[i]=obj;
+                save();
+                break;
                     
+                case 4:
+                    let pincode=readline.question("enter the city pincode:");
+                    obj={
+                        pincode:addressbook.address_book[i].pincode
+                    }
+                    addressbook.address_book[i]=obj;
+                    save();
+                    break;
+
+                    case 5:
+                        let phonenumber=readline.question("enter the  phone number:");
+                        obj={
+                            phonenumber:addressbook.address_book[i].phonenumber
+                        }
+                        addressbook.address_book[i]=obj;
+                        save();
+                        break;
+                        }
+
+
     }
 }
+
+
+function exit(addressbook)
+{
+    console.log("thanku");
+    window.close();
 }
 
 
+
+ 
 
