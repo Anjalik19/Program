@@ -1,0 +1,61 @@
+{
+    "Doctor":[
+        {
+            "firstname":"Anuj",
+            "id":100,
+            "specialization":"Dentist",
+            "availability":"11AM"
+        },
+
+        {
+            "firstname":"Preeti",
+            "id":104,
+            "specialization":"Cardiologists",
+            "availability":"10AM"
+        },
+
+        {
+            "firstname":"Ajit",
+            "id":106,
+            "specialization":"Surgen",
+            "availability":"1PM"
+        },
+        {
+            "firstname":"Pankaj",
+            "id":107,
+            "specialization":"Cardiologist",
+            "availability":"3.30PM"
+        }
+    ],
+
+"Patient":[
+    {
+        "name":"Ankur",
+        "id":1,
+        "mobileNumber":9235719024,
+        "age":21
+    },
+    {
+
+        "name":"Sahil",
+        "id":2,
+        "mobileNumber":9046738291,
+        "age":24
+    },
+    {
+
+        "name":"Shivam",
+        "id":3,
+        "mobileNumber":98346723982,
+        "age":19
+    },
+    {
+
+        "name":"Pooja",
+        "id":5,
+        "mobileNumber":91412424144,
+        "age":28
+    }
+]
+    
+}
