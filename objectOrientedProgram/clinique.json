@@ -1,33 +1,33 @@
 {
     "Doctor":[
         {
-            "firstname":"Anuj",
+            "name":"Anuj",
             "id":100,
             "specialization":"Dentist",
             "availability":"11AM"
         },
 
         {
-            "firstname":"Preeti",
+            "name":"Preeti",
             "id":104,
             "specialization":"Cardiologists",
             "availability":"10AM"
         },
 
         {
-            "firstname":"Ajit",
+            "name":"Ajit",
             "id":106,
             "specialization":"Surgen",
             "availability":"1PM"
         },
         {
-            "firstname":"Pankaj",
+            "name":"Pankaj",
             "id":107,
             "specialization":"Cardiologist",
             "availability":"3.30PM"
         }
     ],
-
+    
 "Patient":[
     {
         "name":"Ankur",
