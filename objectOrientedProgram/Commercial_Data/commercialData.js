@@ -1,7 +1,7 @@
 const readline=require("readline-sync");
 let buyShare=readline.question("enter share number:");
 let sellSahre=readline.question("enter sell number");
-class commercial{
+class commercialData{
     constructor(account_name,share_number,stock_price)
     {
     this.account_name=account_name;
@@ -17,4 +17,4 @@ return this.share_number+=this.buyShare;
         return this.sellSahre=this.share_number-sellSahre;
     }
 }
-module.exports=commercial;
+module.exports=commercialData;
