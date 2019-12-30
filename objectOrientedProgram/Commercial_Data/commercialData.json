@@ -2,24 +2,28 @@
     "accountList":[
         {
             "account_name":"Rahul",
+            "customer_id":1,
             "share_number":3,
             "stock_price":300
         },
         {
 
             "account_name":"Akash",
+            "customer_id":2,
             "share_number":7,
             "stock_price":700
         },
         {
 
             "account_name":"Sanjay",
+            "customer_id":3,
             "share_number":1,
             "stock_price":400
         },
         {
 
             "account_name":"Suraj",
+            "customer_id":4,
             "share_number":9,
             "stock_price":250
         }

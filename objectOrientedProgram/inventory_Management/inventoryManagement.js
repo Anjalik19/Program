@@ -16,13 +16,16 @@ for(let i=0;i<length;i++)
     console.log("price of each rice is:",name +"="+price);
 }
 console.log("Total price of rice is:",count);
-let name,weight,price;
-let info={
-    "name":name,
-    "weight":weight,
-    "price":price
-}
-arr.push(info);
+    let info1={
+        name:"name",
+        weight:"weight",
+        price:"price"
+    }
+arr.push(info1);
 console.log("arr",arr);
 let data1=JSON.stringify(arr);
-fs.writeFile('newData.json',data1);
+    fs.writeFile("newData.json", data1, function (err) {
+        if (err) {
+            console.log(err);
+        }
+    });

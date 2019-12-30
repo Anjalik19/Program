@@ -1,27 +1,50 @@
-let detail=require("./commercialData");
 let readline=require("readline-sync");
 let fs=require('fs');
 let content=fs.readFileSync("./commercialData.json");
 let data=JSON.parse(content);
-let length=data.accountList.length;
-let array=[];
-for(let i=0;i<length;i++)
+console.log(data);
+let y;
+let name=readline.question("having an account already?(y/n)",y);
+try{
+if(name==y){
+content=fs.readFileSync("./commercialData.json");
+data=JSON.parse(content);
+console.log(data);
+}
+else
 {
-let accountName=data.accountList[i].account_Name;
-let shareNumber=data.accountList[i].share_number;
-let stockPrice=data.accountList[i].stock_price;
-let shop=new detail(accountName,shareNumber,stockPrice)
-let total=shop.buy();
-console.log("Account name:",accountName,"Share number",shareNumber,"Stock price",stockPrice);
-console.log("total price of rice is:",total);
-let data1={
-   account_name: "Account name",
-   share_number: "Share number",
-   stock_price:"Stock Price"
+    console.log("file not found");
+}}
+catch(err)
+{
+    console.log(err);
+
+}
+let length=data.accountList.length;
+let id=readline.question("enter your id:");
+{
+    if(id==1)
+    {
+        
+        let name=data.accountList[0].account_name;
+        let id=data.accountList[0].customer_id;
+        let share=data.accountList[0].share_number;
+        let price=data.accountList[0].stock_price;
+        console.log("name:",name,"id:",id,"share:",share,"price:",price);
+    }
     
 }
-array.push(data1);
-console.log("array",array);
-let value=JSON.stringify(array);
-fs.writeFile('newData.json',value);
+let quantity=readline.question("how many shares you want to buy:");
+data[share_number]+=quantity;
+
+
+
+
+
+var person = {fname:"John", lname:"Doe", age:25};
+
+var text = "";
+var x;
+for (x in person) {
+  text += person[x];
 }
