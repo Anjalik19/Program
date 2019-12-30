@@ -1,0 +1,27 @@
+{
+    "AccountList":[
+        {
+            "account_name":"Rahul",
+            "share_number":3,
+            "stock_price":300
+        },
+        {
+
+            "account_name":"Akash",
+            "share_number":7,
+            "stock_price":700
+        },
+        {
+
+            "account_name":"Sanjay",
+            "share_number":1,
+            "stock_price":400
+        },
+        {
+
+            "account_name":"Suraj",
+            "share_number":9,
+            "stock_price":250
+        }
+    ]
+}
