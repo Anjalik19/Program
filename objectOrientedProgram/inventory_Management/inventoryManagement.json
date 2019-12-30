@@ -1,0 +1,76 @@
+{
+    "Rice":[
+        {
+            "name":"Rice Bran",
+            "weight":30,
+            "price":700
+
+        },
+    {
+
+        "name":"Basmati rice",
+        "weight":40,
+        "price":900
+    },
+    {
+        "name":"Jasmine rice",
+        "weigth":45,
+        "price":750
+    },
+    {
+        "name":"Arborio rice",
+        "weight":35,
+        "price":340
+    }
+    ],
+
+    "Pulses":[
+        {
+            "name":"green gram",
+            "weight":25,
+            "price":250
+        },
+        {
+            "name":"white peas",
+            "weight":30,
+            "price":400
+        },
+        {
+            "name":"green peas",
+            "weight":40,
+            "price":500
+        },
+        {
+            "name":"kidney beans",
+            "weight":40,
+            "price":500
+        }
+    ],
+    "Wheats":[
+        {
+            "name":"Emmer",
+            "weight":40,
+            "price":600
+        },
+        {
+
+            "name":"Common wheat",
+            "weight":20,
+            "price":350
+        },
+        {
+
+            "name":"Spelt",
+            "weight":50,
+            "price":600
+        },
+        {
+
+            "name":"Durum",
+            "weight":35,
+            "price":200
+        }
+
+
+    ]
+}
