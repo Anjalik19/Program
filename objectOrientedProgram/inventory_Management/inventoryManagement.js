@@ -1,4 +1,19 @@
-var Rice = require('./inventorymanage.js');
+/******************************************************************************
+* Execution : 1. default node cmd> node inventoryManagement.js
+*             2. if nodemon installed cmd> nodemon inventoryManagement.js
+* 
+* Purpose   : Program to create Inventory Object from JSON. Calculate the value for every Inventory.
+* @description 
+* 
+* @file     : inventoryManagement.js
+* @overview : Program to create Inventory Object from JSON. Calculate the value for every Inventory.
+* @module   : inventoryManagement- This is optional if expeclictly its an npm or local package
+* @author   : Anjali<anjali.march19@gmail.com>
+* @version  : 1.0
+* @since    : 31-11-2019
+*
+******************************************************************************/
+let Rice = require('./inventorymanage.js');
 const readline = require("readline-sync");
 const fs = require("fs");
 let content=fs.readFileSync('./inventoryManagement.json');
