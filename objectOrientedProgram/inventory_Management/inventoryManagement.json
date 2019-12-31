@@ -6,17 +6,18 @@
             "price":700
 
         },
+        {
+            "name":"Jasmine rice",
+            "weight":45,
+            "price":200
+        },
     {
 
         "name":"Basmati rice",
         "weight":40,
         "price":900
     },
-    {
-        "name":"Jasmine rice",
-        "weigth":30,
-        "price":750
-    },
+   
     {
         "name":"Arborio rice",
         "weight":35,

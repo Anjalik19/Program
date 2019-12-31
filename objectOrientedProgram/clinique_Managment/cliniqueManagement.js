@@ -1,8 +1,24 @@
+/******************************************************************************
+* Execution : 1. default node cmd> node cliniqueManagement.js
+*             2. if nodemon installed cmd> nodemon cliniqueManagement.js
+* 
+* Purpose   : program manage a list of Doctors associated with the Clinique.
+* @description 
+* 
+* @file     : cliniqueManagement.js
+* @overview : program manage a list of Doctors associated with the Clinique
+* @module   : cliniquManagement- This is optional if expeclictly its an npm or local package
+* @author   : Anjali<anjali.march19@gmail.com>
+* @version  : 1.0
+* @since    : 30-11-2019
+*
+******************************************************************************/
 const readline=require("readline-sync");
 const fs=require('fs');
 let content=fs.readFileSync("./clinique.json");
 let obj=JSON.parse(content);
 console.log(obj);
+
 class Clinique{
     constructor(obj){
         this.obj=obj;
