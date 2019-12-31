@@ -14,78 +14,75 @@
 * @since    : 28-11-2019
 *
 ******************************************************************************/
-const readline=require("readline-sync");
-const fs=require('fs');
-let content=fs.readFileSync("./addressbook.json");
-let data=JSON.parse(content);
+const readline = require("readline-sync");
+const fs = require('fs');
+let content = fs.readFileSync("./addressbook.json");
+let data = JSON.parse(content);
 console.log(data);
 console.log("1.Adding new data");
 console.log("2.Modify the data");
 console.log("3.Delete the data");
 console.log("4.Exit");
-let option=readline.questionInt("enter your choice:")
-switch(option)
-{
-    case 1:(option=="1")
-    {
-        Address();
-    }
+let option = readline.questionInt("enter your choice:")
+switch (option) {
+    case 1: (option == "1")
+        {
+            Address(data);
+            break;
+        }
     case 2:
-        (option==2)
-    {
-        modify();
-    }
-    break;
+        (option == 2)
+        {
+            modify();
+        }
+        break;
     case 3:
-    (option==3)
-    {
-        remove();
-    }
-    break;
+        (option == 3)
+        {
+            remove();
+        }
+        break;
     case 4:
-        (option==4)
-    {
-        exit();
-    }
-    break;
+        (option == 4)
+        {
+            exit();
+        }
+        break;
 }
 
-function Address(addressbook,address_book) 
-    {
-        let name = readline.question("enter first name:");
-        let lastname = readline.question("enter last name:");
-        let address = readline.question("enter the address:")
-        let state = readline.question("enter the state:");
-        let city = readline.question("enter the city:");
-        let pincode = readline.question("enter the pincode:");
-        let phonenumber = readline.question("enter your phonenumber:");
-        let update=addressbook.address_book;
-        update.push({
-                "first_name":name,
-                "last_name": lastname,
-                "address": address,
-                "state": state,
-                "city": city,
-                "pincode": pincode,
-                "phone_number": phonenumber
-            })
+function Address(addressbook) {
+    let name = readline.question("enter first name:");
+    let lastname = readline.question("enter last name:");
+    let address = readline.question("enter the address:")
+    let state = readline.question("enter the state:");
+    let city = readline.question("enter the city:");
+    let pincode = readline.question("enter the pincode:");
+    let phonenumber = readline.question("enter your phonenumber:");
+    let update = addressbook.address_book;
+    update.push({
+        "first_name": name,
+        "last_name": lastname,
+        "address": address,
+        "state": state,
+        "city": city,
+        "pincode": pincode,
+        "phone_number": phonenumber
+    })
 
-    
+    fs.writeFile('addressbook1.json', JSON.stringify(update), function (err) {
+        if (err) {
+            console.log(err);
+
+        }
+        console.log("Address update succesfully");
+
+    });
 }
-        fs.writeFile(addressbook.json, JSON.stringify(addressbook), function (err) {
-            if (err) {
-                console.log(err);
-               
-            }
-            console.log("Address update succesfully");
-                
-        });
-        
-function remove(addressbook)
-{
+
+function remove(addressbook) {
     let delete1 = readline.question("Please enter the index you want to delete: ");
     delete addressbook.address_book[delete1];
-    let length=addressbook.address_book.length;
+    let length = addressbook.address_book.length;
     for (let i = 0; i < length; i++) {
         if (addressbook.address_book[i] == null) {
             addressbook.address_book.splice(i, 1);
@@ -96,79 +93,74 @@ function remove(addressbook)
         console.log('Done!')
     })
 }
-function modify(addressbook)
-{
+function modify(addressbook) {
     console.log("please enter your choice:");
     console.log("1.To modify Address");
     console.log("2.To modify State");
     console.log("3.To modify City");
     console.log("4.To modify Pincode");
     console.log("5.To modify Phone Number");
-    let option=readline.questionInt("enter your choice:");
-    for(let i=0;i<addressbook.address_book.length;i++)
-    {
-    switch(option)
-    {
-        case 1:
-            let address=readline.question("enter the address:");
-            let obj = {
-                "Name":addressbook.address_book[i].name,
-                "LastName": addressbook.address_book[i].LastName,
-                "Address": addressbook.address_book[i].address,
-            }
-            addressbook.address_book[i] = obj;
-            save();
-            break;
+    let option = readline.questionInt("enter your choice:");
+    for (let i = 0; i < addressbook.address_book.length; i++) {
+        switch (option) {
+            case 1:
+                let address = readline.question("enter the address:");
+                let obj = {
+                    "Name": addressbook.address_book[i].name,
+                    "LastName": addressbook.address_book[i].LastName,
+                    "Address": addressbook.address_book[i].address,
+                }
+                addressbook.address_book[i] = obj;
+                save();
+                break;
 
             case 2:
-                let state=readline.question("enter the state name:");
-                obj={
-                    "state":addressbook.address_book[i].state
+                let state = readline.question("enter the state name:");
+                obj = {
+                    "state": addressbook.address_book[i].state
                 }
-                addressbook.address_book[i]=obj;
+                addressbook.address_book[i] = obj;
                 save();
                 break;
 
-                case 3:
-                    let city=readline.question("enter the city name:");
-                obj={
-                    "city":addressbook.address_book[i].city
+            case 3:
+                let city = readline.question("enter the city name:");
+                obj = {
+                    "city": addressbook.address_book[i].city
                 }
-                addressbook.address_book[i]=obj;
+                addressbook.address_book[i] = obj;
                 save();
                 break;
-                    
-                case 4:
-                    let pincode=readline.question("enter the city pincode:");
-                    obj={
-                        "pincode":addressbook.address_book[i].pincode
-                    }
-                    addressbook.address_book[i]=obj;
-                    save();
-                    break;
 
-                    case 5:
-                        let phonenumber=readline.question("enter the  phone number:");
-                        obj={
-                            "phonenumber":addressbook.address_book[i].phonenumber
-                        }
-                        addressbook.address_book[i]=obj;
-                        save();
-                        break;
-                        }
+            case 4:
+                let pincode = readline.question("enter the city pincode:");
+                obj = {
+                    "pincode": addressbook.address_book[i].pincode
+                }
+                addressbook.address_book[i] = obj;
+                save();
+                break;
+
+            case 5:
+                let phonenumber = readline.question("enter the  phone number:");
+                obj = {
+                    "phonenumber": addressbook.address_book[i].phonenumber
+                }
+                addressbook.address_book[i] = obj;
+                save();
+                break;
+        }
 
 
     }
 }
 
 
-function exit(addressbook)
-{
+function exit(addressbook) {
     console.log("Thankyou");
 
 }
 
 
 
- 
 
