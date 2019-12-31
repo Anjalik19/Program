@@ -1,7 +1,22 @@
-var Singleton = (function () {
-    var instance;
+/******************************************************************************
+* Execution : 1. default node cmd> node singletonDesignPattern.js
+*             2. if nodemon installed cmd> nodemon singletonDesignPattern.js
+* 
+* Purpose   : program to create singleton design pattern.
+* @description 
+* 
+* @file     : singletonDesignPattern.js
+* @overview : program to create singleton design pattern.
+* @module   : singletonDesignPattern- This is optional if expeclictly its an npm or local package
+* @author   : Anjali<anjali.march19@gmail.com>
+* @version  : 1.0
+* @since    : 31-11-2019
+*
+******************************************************************************/
+let singleton = (function () {
+    let instance;
     function createInstance() {
-        var object = new Object("I am the instance");
+        let object = new Object("hello");
         return object;
     }
     return {
@@ -14,12 +29,12 @@ var Singleton = (function () {
     };
 })();
 function run() {
-    var instance1 = Singleton.getInstance();
-    var instance2 = Singleton.getInstance();
+    let instance1 = singleton.getInstance();
+    let instance2 = singleton.getInstance();
     if (instance1 === instance2) {
-        console.log("I am SingleTon");
+        console.log("true");
     } else {
-        console.log("I am not singleTon");
+        console.log("false");
     }
 }
 run();
