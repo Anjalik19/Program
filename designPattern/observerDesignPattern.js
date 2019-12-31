@@ -13,45 +13,12 @@
 * @since    : 31-11-2019
 *
 ******************************************************************************/
-function subject()
-{
-  this.observers=[];
+const readline=require("readline-sync");
+let util=require("../utility/designPatternUtility");
+try{
+    util.observerDesign();
 }
-subject.prototype={
-    subscribe:function(fn)
-    {
-        this.observers.push(fn);
-    },
-unsubscribe:function(fnToRemove)
+catch(err)
 {
-    this.observers=this.observers.filter(fn=>{
-       if(fn!=fnToRemove)
-       {
-           return fn;
-       }})
-    
-},
-fire:function()
-{
-this.observers.forEach(fn=>{
-    fn.call();
-})
+    console.log(err);
 }
-}
-const Subject=new subject();
-function observer1()
-{
-    console.log("observer 1");
-}
-function observer2()
-{
-    console.log("observer 2");
-}
-function observer3()
-{
-    console.log("observer 3");
-}
-Subject.subscribe(observer1);
-Subject.subscribe(observer2);
-Subject.subscribe(observer3);
-Subject.fire();
