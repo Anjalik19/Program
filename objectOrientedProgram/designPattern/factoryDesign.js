@@ -1,37 +1,36 @@
-let name,type;
-function developer(name,type)
+function pc(name)
 {
 this.name=name;
-this.type="developer";
+this.type="pc";
 }
-function tester(name,type)
+function laptop(name)
 {
     this.name=name;
-    this.type="tester";
+    this.type="laptop";
 }
-function employeeFactory()
+function computerFactory()
 {
     this.create=(name,type)=>
     {
 switch(type)
 {
-    case 1:return new developer(name);
+    case 1:return new pc(name);
     break;
-    case 2:return new tester(name);
+    case 2:return new laptop(name);
     break;
 }
     }
 }
 function show()
 {
-    console.log("hi",this.name,"you are a",this.type);
+    console.log("hello..i am",this.name,"and i am a",this.type);
 }
-const factory=new employeeFactory();
+const factory=new computerFactory();
 let arr=[];
-arr.push(factory.create("anjali",1));
-arr.push(factory.create("anuj",2));
-arr.push(factory.create("snigdha",2));
-arr.push(factory.create("sahil",1));
+arr.push(factory.create("Zebronic",1));
+arr.push(factory.create("aser",2));
+arr.push(factory.create("viao",2));
+arr.push(factory.create("hp",1));
 
 arr.forEach(emp => {
     show.call(emp)
