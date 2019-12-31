@@ -59,7 +59,8 @@ function Address(addressbook,address_book)
         let city = readline.question("enter the city:");
         let pincode = readline.question("enter the pincode:");
         let phonenumber = readline.question("enter your phonenumber:");
-        addressbook.address_book.push({
+        let update=addressbook.address_book;
+        update.push({
                 "first_name":name,
                 "last_name": lastname,
                 "address": address,
@@ -84,7 +85,8 @@ function remove(addressbook)
 {
     let delete1 = readline.question("Please enter the index you want to delete: ");
     delete addressbook.address_book[delete1];
-    for (let i = 0; i < addressbook.address_book.length; i++) {
+    let length=addressbook.address_book.length;
+    for (let i = 0; i < length; i++) {
         if (addressbook.address_book[i] == null) {
             addressbook.address_book.splice(i, 1);
         }

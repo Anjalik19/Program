@@ -3,22 +3,12 @@ let fs=require('fs');
 let content=fs.readFileSync("./commercialData.json");
 let data=JSON.parse(content);
 console.log(data);
-let y;
-let name=readline.question("having an account already?(y/n)",y);
-try{
-if(name==y){
+let y,n;
+let name=readline.question("having an account already?(y/n)",y,n);
+if(y){
 content=fs.readFileSync("./commercialData.json");
 data=JSON.parse(content);
 console.log(data);
-}
-else
-{
-    console.log("file not found");
-}}
-catch(err)
-{
-    console.log(err);
-
 }
 let length=data.accountList.length;
 let id=readline.question("enter your id:");
@@ -34,17 +24,7 @@ let id=readline.question("enter your id:");
     }
     
 }
-let quantity=readline.question("how many shares you want to buy:");
-data[share_number]+=quantity;
-
-
-
-
-
-var person = {fname:"John", lname:"Doe", age:25};
-
-var text = "";
-var x;
-for (x in person) {
-  text += person[x];
+if(n)
+{
+    console.log("enter your detail:");
 }

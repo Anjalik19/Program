@@ -1,126 +1,219 @@
 const readline=require("readline-sync");
 const fs=require('fs');
 let content=fs.readFileSync("./clinique.json");
-let data=JSON.parse(content);
-console.log(data);
-let doc=data.Doctor;
-let patient=data.Patient;
-console.log("whom you want to search Doctor or Patient:");
-let option=readline.question("type doc to search doctor or type patient to search for patient:",doc)  ;
-if(option==doc)
-{
-console.log(doc);
-} 
-else(option==patient)
-{
-console.log(patient);
+let obj=JSON.parse(content);
+console.log(obj);
+class Clinique{
+    constructor(obj){
+        this.obj=obj;
+    }
+    getNameFromDoctor(obj) {
+        let nameArray = [];
+        let data = obj.Doctor;
+        //looping over each element
+        for (let key in data) {
+            nameArray.push(data[key].name);
+        }
+        return nameArray;//return array
+    }
+    getIdFromDoctor(obj) {
+        let IdArray = [];
+        let data = obj.Doctor;
+        for (let key in data) {
+            IdArray.push(data[key].id);
+        }
+        return IdArray;//return array
+    }
+    getspecialisationFromDoctor(obj) {
+        let specArray = [];
+        let data = obj;
+        for (let key in data) {
+            specArray.push(data[key].specialisation);
+        }
+        return specArray;//return array
+    }
+    getavailabilityFromDoctor(obj){
+        let availArray=[];
+        let data=obj.Doctor;
+        for(let key in Data){
+            availArray.push(data[key].availability);
+        }
+        return availArray;//return array
+    }
+    getNameFrompatient(obj)
+    {
+        let nameArray=[];
+        let data=obj.patient;
+         for(let key in data){
+             nameArray.push(data[key].name);
+         }
+         return nameArray;
+    }
+    //In this method we get Id of patient
 
+    getIdFrompatient(obj)
+    {
+        let IdArray=[];
+        let data=obj.patient;
+         for(let key in data){
+            IdArray.push(data[key].Id);
+         }
+         return IdArray;
+    }
+   
+    getphoneNumberFrompatient(obj)
+    {
+        let phoneNumberArray=[];
+        let data=obj.patient;
+         for(let key in data){
+            phoneNumberArray.push(data[key].phoneNumber);
+         }
+         return phoneNUmberArray;
+    }
+    getageFrompatient(obj)
+    {
+        let ageArray=[];
+        let data=obj.patient;
+         for(let key in data){
+            ageArray.push(data[key].age);
+         }
+         return ageArray;
+    }
+   
 }
-
-/*        let doctorObj;
-        let docs = [];
-        this.patientObj;
-        this.patients = [];
-    
-    cliniqueDoctor()
+  let doctor = obj.Doctor;
+  let patient = obj.patient;
+  let count = patient.length;
+  let data=new Clinique(obj);
+  let ans=0;
+  while(ans!=5)
      {
-        doctorObj = JSON.parse(fs.readFileSync('doctors.json', 'utf-8'));
-        for (let i = 0; i < this.doctorObj.length; i++) {
-            this.docs.push(new Doctor(this.doctorObj[i]["name"], this.doctorObj[i]["id"], this.doctorObj[i]["specialization"], this.doctorObj[i]["availabity"], this.doctorObj[i]["patients"]));
-        }
-    }
-    cliniquePatients() {
-        this.patientObj = JSON.parse(fs.readFileSync('patients.json', 'utf-8'));
-        for (let i = 0; i < this.patientObj.length; i++)
-            this.patients.push(new Patient(this.patientObj[i]["name"], this.patientObj[i]["id"], this.patientObj[i]["mobile_number"], this.patientObj[i]["age"]));
-    }
-    */
-    addPatient()
-     {
-        let doctor_name = input.question("enter name of doctor under whom you want be treated ");
-        let d = searchByDocName(doctor_name);
-        if (d.numberOfPatients > 5) {
-            console.log("doctor has a busy schedule today, would u like to reschedule your appointment");
-        }
-        else {
-            let name = readline.question("enter name : ");
-            let  id = readline.question("enter ID : ");
-            let  mobile_number = readline.question("enter mobile number : ");
-            let age = readline.question("enter age : ");
-            clinique.Patient.push(new Patient(name, id, mobile_number, age));
-            if (d._availabity == "am")
-                console.log("appointment to the patient is fixed today in the morning ");
-            else if (d._availabity == "pm")
-                console.log("appointment to the patient is fixed today in the afternoon");
-            else{
-                console.log("appointment to the patient is fixed today come at any time ");
-            }
-                d.numberOfPatients++;
-        }
-
-    }
-    searchByDocName(name) 
-    let length=data.Doctor.length;
-    {
-        for (let i = 0; i <length; i++) {
-            if (data.Doctor[i].name == name)
-                return data.Doctor[i];
-        }
-        return "no doctor's found";
-    }
-    searchByDocId(id) 
-    {
-        for (let i = 0; i < length; i++) {
-            if (data.Doctor[i].id == id)
-                return data.Doctor[i];
-        }
-        return "no doctor's found";
-    }
-    searchByDocSpecialization(specialization) 
-    {
-        for (let i = 0; i < length; i++) {
-            if (data.Doctor[i].specialization == specialization)
-                return data.Doctor[i];
-        }
-        return "no doctor's found";
-    }
-    searchByPatientName(name) 
-    length=data.Patient.length;
-    {
-        for (let i = 0; i <length; i++) {
-            if (data.Patient[i].name == name)
-                return data.Patient[i];
-        }
-    }
-    searchByPatientId(id) 
-    {
-        for (let i = 0; i <length; i++) {
-            if (data.Patient[i].id == id)
-                return data.Patient[i];
-        }
-    }
-    searchByPatientPhno(mobile_number) 
-    {
-        for (let i = 0; i < length; i++) {
-            if (data.Patient[i].mobile_number == mobile_number)
-                return data.Patient[i];
-        }
-    }
-    popularDoctors()
-     {
-        var max = 0;
-        var val = 0;
-        for (let i = 0; i < length; i++) {
-            if (this.docs[i].numberOfPatients > max) {
-                val = i;
-                max = this.docs[i].numberOfPatients;
-            }
-        }
-        console.log("*****************************************");
-        console.log("           name : " + this.docs[val].name);
-        console.log("           ID : " + this.docs[val].id);
-        console.log("           Specialization : " + this.docs[val]._specialization);
-        console.log("           Availability : " + this.docs[val]._availabity);
-        console.log("*****************************************")
-    }
+     console.log('*********** ClinicManagment **************');
+         
+     console.log('1 to search for doctor')
+     console.log('2 to search for patient')
+     console.log('3 to take appointment')
+     
+     let ans = readline.question('enter the choice :')
+     if (ans == 1) {
+         console.log(' 1 to search doctor by his name')
+         console.log(' 2 to search doctor by his id')
+         console.log(' 3 to search doctor by his specialisation')
+         let choice = readline.questionInt('enter ur choice :')
+         if (choice == 1) {
+           
+             console.log(data.getNameFromDoctor(obj));
+             let name = readline.question('enter the name of the doctor :')
+            while (!data.getNameFromDoctor(obj).includes(name)) {
+                 console.log('enter the valid name : ' )
+                 name = readline.question('enter the name u want to search :')
+             }
+             for (let key in doctor) {
+                 if (doctor[key].name == name) {
+                     console.log('ur doctor details :')
+                     console.log(doctor[key])
+                 }
+             }
+         }
+         else if (choice == 2) {
+             console.log("id of the doctors are - " + data.getIdFromDoctor(obj))
+             let Id = readline.question('enter the id of the doctor : ')
+             while (!data.getIdFromDoctor(obj).includes(Id)) {
+                 console.log('enter the valid Id :' )
+                 Id = readline.question('enter the Id u want to search :')
+             }
+             for (let key in doctor) {
+                 if (doctor[key].Id == Id) {
+                     console.log('ur doctor details')
+                     console.log(doctor[key])
+                 }
+             }
+         }
+         else if (choice == 3) {
+             console.log("specialisation of the doctors are -"+data.getSpecialisationFromDoctor(obj))
+            let specialisation = readline.question('enter the specialisation of the doctor')
+             while (!data.getSpecialisationFromDoctor(obj).includes(specialisation)) {
+                 console.log('enter the valid specialisation')
+                 specialisation = readline.question('enter the specialisation u want to search - ')
+             }
+             for (let key in doctor) {
+                 if (doctor[key].specialisation == specialisation) {
+                     console.log('ur doctor details')
+                     console.log(doctor[key])
+                 }
+             }
  
+         }
+         else {
+             console.log('enter valid input')
+         }
+        }
+     else if (ans == 2) {
+         console.log('1 to search patient by his name')
+         console.log('2 to search patient by his id')
+         
+         let choice = readline.questionInt('enter ur choice')
+         if (choice == 1) {
+             console.log(data.getNameFrompatient(obj))
+             let name = readline.question('enter the name of the patient')
+             while (!data.getNameFrompatient(obj).includes(name)) {
+                 console.log('enter the valid name')
+                 name = readline.question('enter the name u want to search')
+             }
+             for (let key in patient) {
+                 if (patient[key].name == name) {
+                     console.log('ur patient details')
+                     console.log(patient[key])
+                 }
+             }
+         }
+         else if (choice == 2) {
+             console.log( data.getIdFrompatient(obj))
+             let Id = readline.question('enter the id of the patient')
+             while (!data.getIdFrompatient(object).includes(Id))
+              {
+                 console.log('enter the valid Id')
+                 Id = readline.question('enter the Id u want to search')
+             }
+             for (let key in patient) {
+                 if (patient[key].Id == Id) {
+                     console.log('ur patient details')
+                     console.log(patient[key])
+                 }
+             }
+         }
+         
+         else {
+             console.log('enter valid input :')
+         }
+     }
+     else if (ans == 3) {
+         count++;
+ 
+         let date = new Date();
+         if (count > 5) {
+             let rem = Math.floor(count / 5)
+         }
+ 
+         let name = readline.question("enter the patientname :")
+         let age = readline.questionInt("enter the age of the patient :")
+         let Id = Math.floor(Math.random() * 100000)
+         let phoneNumber = readline.questionInt('enter the phoneNumber :')
+         while (phoneNumber > 9999999999 || phoneNumber < 999999999) {
+             console.log("number should be of 10 digit")
+             phoneNumber = readline.questionInt('enter different phone number :')
+         }
+         console.log("doctors that are present are")
+         console.log(data.getNameFromDoctor(obj));
+         obj.patient.push({
+             "name": name,
+             "Id": Id,
+             "phoneNumber": phoneNumber,
+             "age": age,
+ 
+         })
+         file.writeFileSync('cliniqueManagement.json', JSON.stringify(obj))
+     }
+     else
+         console.log('enter valid input :')
+ }
