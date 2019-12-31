@@ -1,5 +1,5 @@
 /**
- * 
+ * program to create computer Factory that can Produce PC, Laptop
  */
 exports.factoryDesign=()=>
 {
@@ -50,7 +50,7 @@ arr.forEach(comp => {
 },
 
 /**
- * 
+ * program to create observer design pattern.
  */
 exports.observerDesign=()=>
 {
@@ -99,7 +99,7 @@ Subject.fire();
 },
 
 /**
- * 
+ * program to create prototype design pattern
  */
 exports.prototypeDesign=()=>
 {
@@ -139,7 +139,7 @@ exports.prototypeDesign=()=>
 },
 
 /**
- * 
+ * program to create singleton design pattern.
  */
 exports.singletonDesign=()=>
 {
