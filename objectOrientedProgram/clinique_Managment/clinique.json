@@ -32,28 +32,28 @@
     {
         "name":"Ankur",
         "id":1,
-        "mobileNumber":9235719024,
+        "phoneNumber":9235719024,
         "age":21
     },
     {
 
         "name":"Sahil",
         "id":2,
-        "mobileNumber":9046738291,
+        "phoneNumber":9046738291,
         "age":24
     },
     {
 
         "name":"Shivam",
         "id":3,
-        "mobileNumber":98346723982,
+        "phoneNumber":98346723982,
         "age":19
     },
     {
 
         "name":"Pooja",
         "id":5,
-        "mobileNumber":91412424144,
+        "phoneNumber":91412424144,
         "age":28
     }
 ]
