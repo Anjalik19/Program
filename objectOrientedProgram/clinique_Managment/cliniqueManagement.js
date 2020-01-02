@@ -98,7 +98,7 @@ class Clinique{
    
 }
   let doctor = obj.Doctor;
-  let patient = obj.patient;
+  let patient = obj.Patient;
   let count = patient.length;
   let data=new Clinique(obj);
   let ans=0;
