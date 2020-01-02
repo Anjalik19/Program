@@ -26,11 +26,10 @@ class Clinique{
     getNameFromDoctor(obj) {
         let nameArray = [];
         let data = obj.Doctor;
-        //looping over each element
         for (let key in data) {
             nameArray.push(data[key].name);
         }
-        return nameArray;//return array
+        return nameArray;
     }
     getIdFromDoctor(obj) {
         let IdArray = [];
@@ -38,7 +37,7 @@ class Clinique{
         for (let key in data) {
             IdArray.push(data[key].id);
         }
-        return IdArray;//return array
+        return IdArray;
     }
     getspecialisationFromDoctor(obj) {
         let specArray = [];
@@ -46,7 +45,7 @@ class Clinique{
         for (let key in data) {
             specArray.push(data[key].specialisation);
         }
-        return specArray;//return array
+        return specArray;
     }
     getavailabilityFromDoctor(obj){
         let availArray=[];
@@ -54,7 +53,7 @@ class Clinique{
         for(let key in Data){
             availArray.push(data[key].availability);
         }
-        return availArray;//return array
+        return availArray;
     }
     getNameFrompatient(obj)
     {
@@ -65,8 +64,6 @@ class Clinique{
          }
          return nameArray;
     }
-    //In this method we get Id of patient
-
     getIdFrompatient(obj)
     {
         let IdArray=[];
@@ -104,7 +101,7 @@ class Clinique{
   let ans=0;
   while(ans!=5)
      {
-     console.log('*********** ClinicManagment **************');
+     console.log("ClinicManagment");
          
      console.log('1 to search for doctor')
      console.log('2 to search for patient')
@@ -152,7 +149,7 @@ class Clinique{
                  console.log('enter the valid specialisation')
                  specialisation = readline.question('enter the specialisation u want to search - ')
              }
-             for (let key in doctor) {
+             for (let key in Doctor) {
                  if (doctor[key].specialisation == specialisation) {
                      console.log('ur doctor details')
                      console.log(doctor[key])
@@ -176,7 +173,7 @@ class Clinique{
                  console.log('enter the valid name')
                  name = readline.question('enter the name u want to search')
              }
-             for (let key in patient) {
+             for (let key in Patient) {
                  if (patient[key].name == name) {
                      console.log('ur patient details')
                      console.log(patient[key])
@@ -221,15 +218,16 @@ class Clinique{
          }
          console.log("doctors that are present are")
          console.log(data.getNameFromDoctor(obj));
-         obj.patient.push({
+         obj.Patient.push({
              "name": name,
              "Id": Id,
              "phoneNumber": phoneNumber,
              "age": age,
  
          })
-         file.writeFileSync('cliniqueManagement.json', JSON.stringify(obj))
+         fs.writeFile('cliniqueManagement.json', JSON.stringify(obj))
      }
      else
          console.log('enter valid input :')
  }
+ 
