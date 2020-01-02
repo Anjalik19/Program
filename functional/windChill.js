@@ -20,7 +20,7 @@ try{
 let temperature=readline.question("enter the value of temperature:");
 let windSpeed=readline.question("enter the value of windSpeed:");
 let result=util.windChill(temperature,windSpeed);
-console.log("Wind Chill is:");
+console.log("Wind Chill is:",result);
 }
     catch(err)
     {
