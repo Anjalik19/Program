@@ -13,5 +13,5 @@
 * @since    : 31-12-2019
 *
 ******************************************************************************/
-let util=require("../../utility/designPatternUtility");
+let util=require("./singletonDesignPatternBL");
     util.singletonDesign();

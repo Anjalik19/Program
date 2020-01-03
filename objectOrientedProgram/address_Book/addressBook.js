@@ -33,13 +33,13 @@ switch (option) {
     case 2:
         (option == 2)
         {
-            modify();
+            modify(data);
         }
         break;
     case 3:
         (option == 3)
         {
-            remove();
+            remove(data);
         }
         break;
     case 4:
