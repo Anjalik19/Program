@@ -13,12 +13,5 @@
 * @since    : 31-11-2019
 *
 ******************************************************************************/
-const readline=require("readline-sync");
-let util=require("../utility/designPatternUtility");
-try{
+let util=require("./factoryDesignPatternBL");
     util.factoryDesign();
-}
-catch(err)
-{
-    console.log(err);
-}

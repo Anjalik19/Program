@@ -22,6 +22,7 @@ let data=JSON.parse(content);
 console.log(data);
 let length=data.stock_report.length;
 let count=0;
+try{
 for(let i=0;i<length;i++)
 {
     let name=data.stock_report[i].stock_name;
@@ -33,3 +34,8 @@ for(let i=0;i<length;i++)
     console.log("total value of each stock:",share*price);
 }
 console.log("Total price of share:",count);
+}
+catch(error)
+{
+    console.log(error);
+}
