@@ -69,7 +69,7 @@ function Address(addressbook) {
         "phone_number": phonenumber
     })
 
-    fs.writeFile('addressbook1.json', JSON.stringify(update), function (err) {
+    fs.writeFile('addressbook.json', JSON.stringify(update), function (err) {
         if (err) {
             console.log(err);
 
@@ -88,7 +88,7 @@ function remove(addressbook) {
             addressbook.address_book.splice(i, 1);
         }
     }
-    fs.writeFile('addressBook.json', JSON.stringify(addressbook), function (err) {
+    fs.writeFile('addressbook.json', JSON.stringify(addressbook), function (err) {
         if (err) throw err
         console.log('Done!')
     })
