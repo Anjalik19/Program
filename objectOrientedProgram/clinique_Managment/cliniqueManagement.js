@@ -220,7 +220,7 @@ while (ans != 5) {
             "age": age,
 
         })
-        fs.writeFile('cliniqueManagement.json', JSON.stringify(obj))
+        fs.writeFile('clinique.json', JSON.stringify(obj))
     }
     else
         console.log('enter valid input :')
