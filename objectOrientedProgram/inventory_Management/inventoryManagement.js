@@ -10,7 +10,7 @@
 * @module   : inventoryManagement- This is optional if expeclictly its an npm or local package
 * @author   : Anjali<anjali.march19@gmail.com>
 * @version  : 1.0
-* @since    : 31-11-2019
+* @since    : 31-12-2019
 *
 ******************************************************************************/
 let Rice = require('./inventorymanage.js');
