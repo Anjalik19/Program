@@ -111,7 +111,10 @@ function modify(addressbook) {
                     "Address": addressbook.address_book[i].address,
                 }
                 addressbook.address_book[i] = obj;
-                save();
+                fs.writeFile('addressbook.json', JSON.stringify(address), function (err) {
+                    if (err) throw err
+                    console.log('Done!')
+                })
                 break;
 
             case 2:
@@ -119,8 +122,10 @@ function modify(addressbook) {
                 obj = {
                     "state": addressbook.address_book[i].state
                 }
-                addressbook.address_book[i] = obj;
-                save();
+                fs.writeFile('addressbook.json', JSON.stringify(state), function (err) {
+                    if (err) throw err
+                    console.log('Done!')
+                })
                 break;
 
             case 3:
@@ -129,7 +134,10 @@ function modify(addressbook) {
                     "city": addressbook.address_book[i].city
                 }
                 addressbook.address_book[i] = obj;
-                save();
+                fs.writeFile('addressbook.json', JSON.stringify(city), function (err) {
+                    if (err) throw err
+                    console.log('Done!')
+                })
                 break;
 
             case 4:
@@ -138,7 +146,10 @@ function modify(addressbook) {
                     "pincode": addressbook.address_book[i].pincode
                 }
                 addressbook.address_book[i] = obj;
-                save();
+                fs.writeFile('addressbook.json', JSON.stringify(pincode), function (err) {
+                    if (err) throw err
+                    console.log('Done!')
+                })
                 break;
 
             case 5:
@@ -147,12 +158,16 @@ function modify(addressbook) {
                     "phonenumber": addressbook.address_book[i].phonenumber
                 }
                 addressbook.address_book[i] = obj;
-                save();
+                fs.writeFile('addressbook.json', JSON.stringify(phonenumber), function (err) {
+                    if (err) throw err
+                    console.log('Done!')
+                })
                 break;
         }
 
 
     }
+    
 }
 
 
