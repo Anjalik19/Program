@@ -27,8 +27,8 @@ for(let i=0;i<length;i++)
     let name=data.Rice[i].name;
     let weight=data.Rice[i].weight;
     let price=data.Rice[i].price;
-    var company = new Rice(name, weight, price);
-    var total = company.sum();
+    let company = new Rice(name, weight, price);
+    let total = company.sum();
     console.log("Name : " + name + " , " + "Weight : " + weight + " , " + "price : " + price);
     console.log("Total price of rice is =" + total)
 
