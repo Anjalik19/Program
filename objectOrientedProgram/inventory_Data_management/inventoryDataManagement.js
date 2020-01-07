@@ -44,7 +44,7 @@ for(let j=0;j<lengths;j++)
 }
 console.log("Total price of pulses is:",count);
 console.log("-----------Wheat-------------");
-let leng=data.Wheats.leng;
+let leng=data.Wheats.lengm   ;
 for(let k=0;k<length;k++)
 {
 let name=data.Wheats[k].name;

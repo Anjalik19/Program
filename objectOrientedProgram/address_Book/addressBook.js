@@ -111,18 +111,20 @@ function modify(addressbook) {
                     "Address": addressbook.address_book[i].address,
                 }
                 addressbook.address_book[i] = obj;
-                fs.writeFile('addressbook.json', JSON.stringify(address), function (err) {
+                fs.writeFile('addressbook.json', JSON.stringify(obj), function (err) {
                     if (err) throw err
                     console.log('Done!')
                 })
+
                 break;
 
             case 2:
                 let state = readline.question("enter the state name:");
-                obj = {
+                obj1 = {
                     "state": addressbook.address_book[i].state
                 }
-                fs.writeFile('addressbook.json', JSON.stringify(state), function (err) {
+                addressbook.address_book[i] = obj1;
+                fs.writeFile('addressbook.json', JSON.stringify(obj1), function (err) {
                     if (err) throw err
                     console.log('Done!')
                 })
@@ -130,11 +132,11 @@ function modify(addressbook) {
 
             case 3:
                 let city = readline.question("enter the city name:");
-                obj = {
+                obj2 = {
                     "city": addressbook.address_book[i].city
                 }
-                addressbook.address_book[i] = obj;
-                fs.writeFile('addressbook.json', JSON.stringify(city), function (err) {
+                addressbook.address_book[i] = obj2;
+                fs.writeFile('addressbook.json', JSON.stringify(obj2), function (err) {
                     if (err) throw err
                     console.log('Done!')
                 })
@@ -142,11 +144,11 @@ function modify(addressbook) {
 
             case 4:
                 let pincode = readline.question("enter the city pincode:");
-                obj = {
+                obj3 = {
                     "pincode": addressbook.address_book[i].pincode
                 }
-                addressbook.address_book[i] = obj;
-                fs.writeFile('addressbook.json', JSON.stringify(pincode), function (err) {
+                addressbook.address_book[i] = obj3;
+                fs.writeFile('addressbook.json', JSON.stringify(obj3), function (err) {
                     if (err) throw err
                     console.log('Done!')
                 })
@@ -154,11 +156,11 @@ function modify(addressbook) {
 
             case 5:
                 let phonenumber = readline.question("enter the  phone number:");
-                obj = {
+                obj4 = {
                     "phonenumber": addressbook.address_book[i].phonenumber
                 }
-                addressbook.address_book[i] = obj;
-                fs.writeFile('addressbook.json', JSON.stringify(phonenumber), function (err) {
+                addressbook.address_book[i] = obj4;
+                fs.writeFile('addressbook.json', JSON.stringify(obj4), function (err) {
                     if (err) throw err
                     console.log('Done!')
                 })

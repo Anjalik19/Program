@@ -34,7 +34,7 @@ switch(type)
 }
 function show()
 {
-    console.log("hello..i am",this.name,"and i am a",this.type,'my ram is:',this.ram);
+    console.log("hello..i am",this.name,"and i am a",this.type,'my ram is',this.ram);
 }
 const factory=new computerFactory();
 let arr=[];

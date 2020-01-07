@@ -117,38 +117,38 @@ while (ans != 5) {
                 console.log('enter the valid name : ')
                 name = readline.question('enter the name u want to search :')
             }
-            for (let key in Doctor) {
-                if (Doctor[key].name == name) {
+            for (let key in data) {
+                if (data[key].name == name) {
                     console.log('ur doctor details :')
-                    console.log(Doctor[key])
+                    console.log(data[key])
                 }
             }
         }
         else if (choice == 2) {
             console.log("id of the doctors are - " + data.getDoctorById(obj))
-            let Id = readline.question('enter the id of the doctor : ')
-            while (!data.getDoctorById(obj).includes(Id)) {
+            let id = readline.question('enter the id of the doctor : ')
+            while (!data.getDoctorById(obj).includes(id)) {
                 console.log('enter the valid Id :')
-                Id = readline.question('enter the Id u want to search :')
+                id = readline.question('enter the Id u want to search :')
             }
-            for (let key in Doctor) {
-                if (Doctor[key].Id == Id) {
+            for (let key in data) {
+                if (data[key].id == id) {
                     console.log('ur doctor details')
-                    console.log(Doctor[key])
+                    console.log(data[key])
                 }
             }
         }
         else if (choice == 3) {
             console.log("specialisation of the doctors are -" + data.getDoctorBySpecilisation(obj))
-            let specialisation = readline.question('enter the specialisation of the doctor')
+            let specialisation = readline.question('enter the specialisation of the doctor:')
             while (!data.getDoctorBySpecilisation(obj).includes(specialisation)) {
                 console.log('enter the valid specialisation')
                 specialisation = readline.question('enter the specialisation u want to search - ')
             }
-            for (let key in Doctor) {
-                if (Doctor[key].specialisation == specialisation) {
+            for (let key in data) {
+                if (data[key].specialisation == specialisation) {
                     console.log('ur doctor details')
-                    console.log(Doctor[key])
+                    console.log(data[key])
                 }
             }
 
