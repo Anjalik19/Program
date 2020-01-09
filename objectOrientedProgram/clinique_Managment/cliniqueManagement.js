@@ -209,7 +209,7 @@ while (ans != 5) {
         let phoneNumber = readline.questionInt('enter the phoneNumber :')
         while (phoneNumber > 9999999999 || phoneNumber < 999999999) {
             console.log("number should be of 10 digit")
-            phoneNumber = readline.questionInt('enter different phone number :')
+            phoneNumber = readline.questionInt('enter again:')
         }
         console.log("doctors that are present are")
         console.log(data.getDoctorByName(obj));

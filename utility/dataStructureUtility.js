@@ -415,3 +415,153 @@ exports.calander = () => {
 
     }
 }
+
+    
+    /**
+      * prime anagrammestack programme logic.
+      * @param {number}n1-variable to store the n1 value.
+      * @param {number}n2-variable to store the n2 value.
+      * Add the Prime Numbers that are Anagram in the Range of 0 - 1000 in
+      *  a Stack using the Linked List.
+      *@return Print the Anagrams in the Reverse Order. Note no Collection Library can be used.
+      */
+    exports.primeAnagrameStack=()=>{
+      let  obj = new StackUsingLinkedlist();
+        let b, count=0;
+        for (let i = 2; i <= 1000; i++) {
+            b = true;
+            for (let j = 2; j < i / 2; j++) {
+                if (i % j == 0) {
+                    b = false;
+                    break;
+                }
+            }
+            if (b)
+                count++;
+        }
+        let a=new int[count];
+        let k=0;
+        for (let i = 2; i <= 1000; i++) {
+            b = true;
+            for (let j = 2; j < i / 2; j++) {
+                if (i % j == 0) {
+                    b = false;
+                    break;
+                }
+            }
+            if (b)
+            {
+                if(k<count)
+                {
+                    a[k]=i;
+                    k++;
+                }
+            }
+                
+        }
+        for(let l=0;l<a.length;l++)
+        {
+            for(let m=l+1;m<a.length;m++)
+            {
+                if(anagram(a[l],a[m]))
+                {
+                    obj.push(a[l]);
+                    obj.push(a[m]);
+                }
+            }
+        }
+        obj.display();
+        }
+     function anagram(n1, n2) {
+        let n1count = count(n1);
+        let n2count = count(n2);
+        for (let i = 0; i < n2count.length; i++) {
+            if (n1count[i] != n2count[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+     function count(n) {
+        let count = new int[10];
+        let temp = n;
+        while (temp != 0) {
+            let r = temp % 10;
+            count[r]++;
+            temp = temp / 10;
+        }
+        return count;
+    }
+    /**
+      * prime anagrammeQueue programme logic.
+      * @param {number}n1-variable to store the n1 value.
+      * @param {number}n2-variable to store the n2 value.
+      *  @return Print the Anagrams in the Reverse Order.
+      */
+    exports.primeAnagramQueue =()=>{
+       
+            let obj = new QueueUsingLinkedList();
+            let b,count = 0;
+            for (let i = 2; i <= 1000; i++) {
+                b = true;
+                for (let j = 2; j < i / 2; j++) {
+                    if (i % j == 0) {
+                        b = false;
+                        break;
+                    }
+                }
+                if (b)
+                    count++;
+            }
+            let a = new int[count];
+            let k = 0;
+            for (let i = 2; i <= 1000; i++) {
+                b = true;
+                for (let  j = 2; j < i / 2; j++) {
+                    if (i % j == 0) {
+                        b = false;
+                        break;
+                    }
+                }
+                if (b) {
+                    if (k < count) {
+                        a[k] = i;
+                        k++;
+                    }
+                }
+    
+            }
+            for (let l = 0; l < a.length; l++) {
+                for (let m = l + 1; m < a.length; m++) {
+                    if (anagram(a[l], a[m])) {
+                        obj.enqueue(a[l]);
+                        obj.enqueue(a[m]);
+                    }
+                }
+            }
+            for (let r = 0; r < obj.currentsize(); r++) {
+                consolele.log("%d->", obj.dequeue());
+                console.log(obj.dequeue());
+                console.log();
+            }
+        }
+        function anagram(n1, n2) {
+            let n1count = count(n1);
+            let n2count = count(n2);
+            for (let i = 0; i < n2count.length; i++) {
+                if (n1count[i] != n2count[i]) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        function count(n) {
+            let count = new int[10];
+            let temp = n;
+            while (temp != 0) {
+                let r = temp % 10;
+                count[r]++;
+                temp = temp / 10;
+            }
+            return count;
+        }
