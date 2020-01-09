@@ -416,6 +416,75 @@ exports.calander = () => {
     }
 }
 
+
+/**
+      * prime anagramme programme logic.
+      * 
+      * @param {number}n1-variable to store the n1 value.
+      * @param {number}n2-variable to store the n2 value.
+      * these values are store it in to the another function.
+      * Further store in a 2D Array the numbers that are Anagram and 
+      * @return numbers that are not Anagram.
+      */
+     exports.primeAnagram=()=>{
+        let ar = new ArrayList();
+        console.log();
+        let b,count = 0;
+        for (let i = 2; i <= 1000; i++) {
+            for (let j = 2; j < i / 2; j++) {
+                if (i % j == 0) {
+                    b = false;
+                    break;
+                }
+            }
+            if (b)
+                ar.add(i);
+        }
+        for (let i = 0; i < ar.size(); i++) {
+            for (let j = i + 1; j < ar.size(); j++) {
+                if (anagram(ar.get(i), ar.get(j))) {
+                    count++;
+                }
+            }
+        }
+        let array = new int[count][2];
+        let k = 0;
+        for (let i = 0; i < ar.size(); i++) {
+            for (let j = i + 1; j < ar.size(); j++) {
+                if (anagram(ar.get(i), ar.get(j))) {
+                    let val1 = ar.get(i);
+                    let val2 = ar.get(j);
+                    console.log(array[k][0] = val1);
+                    console.log(" ");
+                    console.log(array[k][1] = val2);
+                    console.log();
+                    k++;
+                }
+            }
+        }
+    }
+   function anagram(n1, n2) {
+        let n1count = count(n1);
+        let n2count = count(n2);
+        for (let i = 0; i < n2count.length; i++) {
+            if (n1count[i] != n2count[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+   function count(n){
+        let count = new int[10];
+        let temp = n;
+        while (temp != 0) {
+            let r = temp % 10;
+            count[r]++;
+            temp = temp / 10;
+        }
+        return count;
+    }
+    primeAnagrams();
+
     
     /**
       * prime anagrammestack programme logic.
