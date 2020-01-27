@@ -1,0 +1,81 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="myStyle.css">
+    <script>
+        function manage(txt) {
+            var bton = document.getElementById('submit');
+            var element = document.getElementsByTagName('input');
+            for (i = 0; i < element.length; i++) {
+
+
+                if (element[i].type == 'text' && element[i].value == '') {
+                    bton.disabled = true;
+                    return false;
+                }
+                else {
+                    bton.disabled = false;
+                }
+            }
+        }
+       
+        
+        
+        var pswd = document.getElementById('pswd');
+
+        function info() {
+            var firstname = document.getElementById('fname');
+            localStorage.setItem('fname', firstname.value);
+            var lastname = document.getElementById('lname');
+            localStorage.setItem('lname', lastname.value);
+            var email = document.getElementById('email');
+            localStorage.setItem('email', email.value);
+            localStorage.setItem('pswd', pswd.value);
+            console.log("hi");
+
+        }
+
+
+    </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <form id="form1">
+        <h2 class="h2">Register</h2>
+        <div id="fname" class="alignment">
+            <label for="fname" class="inputs"><b>First Name</b></label>
+            <input type="text" onchange="manage(this)"
+                style="border-radius: 8px; border: none;height: 24px; outline: none;" />
+            <br>
+        </div>
+        <div id="lname" class="alignment">
+            <label for="lname" class="inputs"><b>Last Name</b></label>
+            <input type="text" onchange="manage(this)"
+                style="border-radius: 8px; border: none;height: 24px;  outline: none;" />
+            <br>
+        </div>
+        <div id="email" class="alignment">
+            <label for="email" class="inputs"><b>Email</b></label>
+            <input type="text" onchange="manage(this)"
+                style="border-radius: 8px; border: none;height: 24px; outline: none;" />
+            <br>
+        </div>
+        <div id="pswd" class="alignment">
+            <label for="psw" class="inputs"><b>Password</b></label>
+            <input type="password" onchange="manage(this)"
+                style="border-radius: 8px;border: none;height: 24px; outline: none;" />
+            <br>
+        </div>
+        <div id="phone" class="alignment">
+            <label for="phone" class="inputs"><b>Mobile No.</b></label>
+            <input type="text" onchange="manage(this)"
+                style="border-radius: 8px;border: none;height: 24px; outline: none;" />
+            <br>
+        </div>
+        <button type="submit" id="submit" disabled="disabled" onclick="info()">Submit</button>
+        <button type="submit" id="cancel">Cancel</button>
+    </form>
+</body>
+
+</html>
