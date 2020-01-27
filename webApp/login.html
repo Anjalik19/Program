@@ -23,14 +23,14 @@
 function checkData() {
 
 // stored data from the register
-var storedName = localStorage.getItem('fname');
-var storedLName = localStorage.getItem('lname');
-var storedEmail = localStorage.getItem('email');
-var storedPswd = localStorage.getItem('pswd');
+var storedName = localStorage.getItem('firstName');
+var storedLName = localStorage.getItem('lastName');
+var storedEmail = localStorage.getItem('mail');
+var storedPswd = localStorage.getItem('pwd');
 
 // entered data from the login
-var username = document.getElementById('username');
-var password = document.getElementById('password');
+var username = document.getElementById('name');
+var password = document.getElementById('pass');
 
 if(username.value == storedName && password.value == storedPswd) {
     alert('You are loged in.');
@@ -49,11 +49,11 @@ if(username.value == storedName && password.value == storedPswd) {
             <h2>Login</h2>
         </div>
         <div id="username">
-            <input type="text" placeholder="Email" onchange="manage(this)" style="border-radius: 8px;border: none; height: 24px;"/>
+            <input type="text" id="name"placeholder="Email" onchange="manage(this)" style="border-radius: 8px; border: none;height: 24px; outline: none;"/>
             <br>
         </div>
         <div id="password">
-            <input type="password" placeholder="Password" onchange="manage(this)" style="border-radius: 8px; border: none;height: 24px;"/>
+            <input type="password" id="pass" placeholder="Password" onchange="manage(this)" style="border-radius: 8px; outline: none; border: none;height: 24px;"/>
             <br>
         </div>
         <div id="remember">

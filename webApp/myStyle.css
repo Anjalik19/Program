@@ -57,6 +57,7 @@ button:hover {
     border: none;
     border-radius: 7px;
     height: 24px;
+    outline: none;
   }
   #password
   {
@@ -66,6 +67,7 @@ button:hover {
     border: none;
     border-radius: 7px;
     height: 24px;
+    outline: none;
   }
 .register
 {
