@@ -28,19 +28,12 @@
             localStorage.setItem('number', phnnum.value);
             var pswd = document.getElementById('pwd');
             localStorage.setItem('pwd', pswd.value);
-            console.log(firstname);
-
         }
-
-
     </script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-</head>
-
 <body>
 
-    <form id="form1">
-        <h2 class="h2">Register</h2>
+    <form id="form1" method="POST">
+     <h2 class="h2">Register</h2>
         <div id="fname" class="alignment">
             <label for="fname" class="inputs"><b>First Name</b></label>
             <input type="text" onchange="manage(this)" id="firstName"
