@@ -1,21 +1,22 @@
 body 
 {
-    background-color: floralwhite;
+  
     padding-top:10vh ;
+    background-image: url("/assets/abstract-blue-geometric-shapes-background_1035-17545.jpg")
   }
 #form{
     width: 25%;
     margin:auto;
     text-align: center;
     border-radius: 10px;
-    background-color: thistle;
+    background-color:#f8eed8;
 }
 #form1{
     width: 25%;
     margin:auto;
     text-align: center;
     border-radius: 10px;
-    background-color: thistle;
+    background-color:#f8eed8;
 }
 #loginButton {
   background-color: #4CAF50;
