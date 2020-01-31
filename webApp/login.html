@@ -6,7 +6,7 @@
         function manage(txt) {
             var bton = document.getElementById('loginButton');
             var element = document.getElementsByTagName('input'); 
-            for (i = 0; i < element.length; i++) {
+            for (var i = 0; i < element.length; i++) {
     
               
                 if (element[i].type == 'text' && element[i].value == '') {
@@ -42,7 +42,7 @@ if(username.value == storedName && password.value == storedPswd) {
 </head>
 
 <body>
-  
+  <div id="card">
     <form id="form" method="POST" >
         <div id="login">
             <h2>Login</h2>
@@ -67,6 +67,7 @@ if(username.value == storedName && password.value == storedPswd) {
 
 
     </form>
+</div>
 </body>
 
 </html>

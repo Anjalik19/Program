@@ -1,11 +1,68 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <title>Registration</title>
     <link rel="stylesheet" type="text/css" href="myStyle.css">
+    
+</head>
+<body>
+    <form name="form" id="form1" method="POST" onsubmit="return validate();">
+        <h2 class="h2">Register</h2>
+        <div id="fname" class="alignment">
+            <label for="fname" class="inputs"><b>First Name</b></label>
+            <input type="text" onchange="manage(this)" id="firstName"
+                   style="border-radius: 8px; border: none;height: 24px; outline: none;" />
+            <br>
+        </div>
+        <div id="lname" class="alignment">
+            <label for="lname" class="inputs"><b>Last Name</b></label>
+            <input type="text" onchange="manage(this)" id="lastName"
+                   style="border-radius: 8px; border: none;height: 24px;  outline: none;" />
+            <br>
+        </div>
+        <div id="email" class="alignment">
+            <label for="email" class="inputs"><b>Email</b></label>
+            <input type="text" onchange="manage(this)" id="mail"
+                   style="border-radius: 8px; border: none;height: 24px; outline: none;" />
+            <br>
+        </div>
+        <div id="phone" class="alignment">
+            <label for="phone" class="inputs"><b>Mobile No.</b></label>
+            <input type="text" onchange="manage(this)" id="number"
+                   style="border-radius: 8px;border: none;height: 24px; outline: none;" />
+            <br>
+        </div>
+        <div id="gender" class="alignment">
+            <label for="gender" class="inputs"><b>Gender</b></label>
+            <input type="radio" name="Gender" value="male" onchange="manage(this)" id="Male" />Male
+            <input type="radio" name="Gender" value="female" onchange="manage(this)" id="Female" />Female
+            <br>
+        </div>
+        <div id="address" class="alignment">
+            <label for="address" class="inputs"><b>Address</b></label>
+            <input type="text" onchange="manage(this)" id="add"
+                   style="border-radius: 8px;border: none;height: 24px; outline: none;" />
+            <br>
+        </div>
+
+        <div id="pswd" class="alignment">
+            <label for="psw" class="inputs"><b>Password</b></label>
+            <input type="password" onchange="manage(this)" id="pwd"
+                   style="border-radius: 8px;border: none;height: 24px; outline: none;" />
+            <br>
+        </div>
+        <div id="error">
+
+        </div>
+
+        <button type="submit" id="submit" disabled="disabled" onclick="info()">Submit</button>
+        <button type="submit" id="cancel">Cancel</button>
+    </form>
     <script>
         function manage(txt) {
             var bton = document.getElementById('submit');
             var element = document.getElementsByTagName('input');
-            for (i = 0; i < element.length; i++) {
+            for (var i = 0; i < element.length; i++) {
 
 
                 if (element[i].type == 'text' && element[i].value == '') {
@@ -28,46 +85,37 @@
             localStorage.setItem('number', phnnum.value);
             var pswd = document.getElementById('pwd');
             localStorage.setItem('pwd', pswd.value);
+            var gen = document.getElementById('gender');
+            localStorage.setItem('gender', gen.value);
+            var addres = document.getElementById('add');
+            localStorage.setItem('add', addres.value);
+        }
+        validate = () => {
+            if (document.form.firstName.value.length <= 3) {
+                document.getElementById("error").innerHTML = "First name should be of atleast 3 letters";
+                document.form.firstName.focus();
+                return false;
+            }
+        
+         if (document.form.mail.value.length=="") {
+                document.getElementById("error").innerHTML = "Email cannot be blank";
+                document.form.mail.focus();
+                return false;
+            }
+        
+         if (document.form.number.value.length <=10) {
+                document.getElementById("error").innerHTML = "Mobile no. should be 10 digit";
+                document.form.number.focus();
+                return false;
+            }
+        
+          if (document.form.add.value.length=="") {
+                document.getElementById("error").innerHTML = "Address cannot be blank";
+                document.form.add.focus();
+                return false;
+        }
+        return true
         }
     </script>
-<body>
-
-    <form id="form1" method="POST">
-     <h2 class="h2">Register</h2>
-        <div id="fname" class="alignment">
-            <label for="fname" class="inputs"><b>First Name</b></label>
-            <input type="text" onchange="manage(this)" id="firstName"
-                style="border-radius: 8px; border: none;height: 24px; outline: none;" />
-            <br>
-        </div>
-        <div id="lname" class="alignment">
-            <label for="lname" class="inputs"><b>Last Name</b></label>
-            <input type="text" onchange="manage(this)" id="lastName"
-                style="border-radius: 8px; border: none;height: 24px;  outline: none;" />
-            <br>
-        </div>
-        <div id="email" class="alignment">
-            <label for="email" class="inputs"><b>Email</b></label>
-            <input type="text" onchange="manage(this)" id="mail"
-                style="border-radius: 8px; border: none;height: 24px; outline: none;" />
-            <br>
-        </div>
-        <div id="phone" class="alignment">
-            <label for="phone" class="inputs"><b>Mobile No.</b></label>
-            <input type="text" onchange="manage(this)" id="number"
-                style="border-radius: 8px;border: none;height: 24px; outline: none;" />
-            <br>
-        </div>
-        <div id="pswd" class="alignment">
-            <label for="psw" class="inputs"><b>Password</b></label>
-            <input type="password" onchange="manage(this)" id="pwd"
-                style="border-radius: 8px;border: none;height: 24px; outline: none;" />
-            <br>
-        </div>
-        
-        <button type="submit" id="submit" disabled="disabled" onclick="info()">Submit</button>
-        <button type="submit" id="cancel">Cancel</button>
-    </form>
 </body>
-
 </html>
