@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bridge Labs\\Desktop\\FundooNotes\\FundooNotes\\FundooNotes.csproj": {}
+    "C:\\Users\\Bridge Labs\\Desktop\\Data\\Program\\FundooNotes\\FundooNotes\\FundooNotes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bridge Labs\\Desktop\\FundooNotes\\FundooNotes\\FundooNotes.csproj": {
+    "C:\\Users\\Bridge Labs\\Desktop\\Data\\Program\\FundooNotes\\FundooNotes\\FundooNotes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bridge Labs\\Desktop\\FundooNotes\\FundooNotes\\FundooNotes.csproj",
+        "projectUniqueName": "C:\\Users\\Bridge Labs\\Desktop\\Data\\Program\\FundooNotes\\FundooNotes\\FundooNotes.csproj",
         "projectName": "FundooNotes",
-        "projectPath": "C:\\Users\\Bridge Labs\\Desktop\\FundooNotes\\FundooNotes\\FundooNotes.csproj",
+        "projectPath": "C:\\Users\\Bridge Labs\\Desktop\\Data\\Program\\FundooNotes\\FundooNotes\\FundooNotes.csproj",
         "packagesPath": "C:\\Users\\Bridge Labs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bridge Labs\\Desktop\\FundooNotes\\FundooNotes\\obj\\",
+        "outputPath": "C:\\Users\\Bridge Labs\\Desktop\\Data\\Program\\FundooNotes\\FundooNotes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Bridge Labs\\AppData\\Roaming\\NuGet\\NuGet.Config",
