@@ -91,9 +91,36 @@ namespace FundooNotes.Repository
 
         }
 
-        public void readEmployee()
+        public bool readEmployee(string email)
         {
-           
+            Employee emp = new Employee();
+            SqlConnection conn = new SqlConnection(dbConn);
+            string sqlQuery = "select * from empData where email= " + email;
+            SqlCommand cmd = new SqlCommand("spReadEmployee", conn);
+            conn.Open();
+            SqlDataReader read = cmd.ExecuteReader();
+            while (read.Read())
+            {
+                emp.firstname = read["firstName"].ToString();
+                emp.lastname = read["lastName"].ToString();
+                emp.mail = read["email"].ToString();
+                emp.gen = read["gender"].ToString();
+                emp.add = read["addres"].ToString();
+                emp.mobile = Convert.ToInt32(read["number"]);
+                emp.pass = read["passwrd"].ToString();
+            }
+            read.Close();
+            int result = cmd.ExecuteNonQuery();
+            conn.Close();
+            if (result == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            throw new NotImplementedException();
         }
     }
 }

@@ -9,7 +9,7 @@ namespace FundooNotes.Manager
     interface InterEmpManager
     {
         bool createEmployee(Employee employee);
-        bool readEmployee();
+        bool readEmployee(string email);
         bool deleteEmployee(string email);
         bool updateEmployee(Employee employee);
     }

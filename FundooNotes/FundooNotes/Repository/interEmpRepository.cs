@@ -9,7 +9,7 @@ namespace FundooNotes.Repository
     interface interEmpRepository
     {
         bool createEmployee(Employee employee);
-        bool readEmployee();
+        bool readEmployee(string email);
         bool deleteEmployee(string email);
         bool updateEmployee(Employee employee);
     }

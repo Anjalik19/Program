@@ -20,3 +20,11 @@ C:\Users\Bridge Labs\Desktop\Data\Program\FundooNotes\FundooNotes\obj\Debug\netc
 C:\Users\Bridge Labs\Desktop\Data\Program\FundooNotes\FundooNotes\obj\Debug\netcoreapp2.1\FundooNotes.AssemblyInfo.cs
 C:\Users\Bridge Labs\Desktop\Data\Program\FundooNotes\FundooNotes\obj\Debug\netcoreapp2.1\FundooNotes.dll
 C:\Users\Bridge Labs\Desktop\Data\Program\FundooNotes\FundooNotes\obj\Debug\netcoreapp2.1\FundooNotes.pdb
+C:\Users\Bridge Labs\Desktop\Data\Program\FundooNotes\FundooNotes\bin\Debug\netcoreapp2.1\libman.json
+C:\Users\Bridge Labs\Desktop\Data\Program\FundooNotes\FundooNotes\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\Bridge Labs\Desktop\Data\Program\FundooNotes\FundooNotes\bin\Debug\netcoreapp2.1\FundooNotes.deps.json
+C:\Users\Bridge Labs\Desktop\Data\Program\FundooNotes\FundooNotes\bin\Debug\netcoreapp2.1\FundooNotes.runtimeconfig.json
+C:\Users\Bridge Labs\Desktop\Data\Program\FundooNotes\FundooNotes\bin\Debug\netcoreapp2.1\FundooNotes.runtimeconfig.dev.json
+C:\Users\Bridge Labs\Desktop\Data\Program\FundooNotes\FundooNotes\bin\Debug\netcoreapp2.1\FundooNotes.dll
+C:\Users\Bridge Labs\Desktop\Data\Program\FundooNotes\FundooNotes\bin\Debug\netcoreapp2.1\FundooNotes.pdb
+C:\Users\Bridge Labs\Desktop\Data\Program\FundooNotes\FundooNotes\obj\Debug\netcoreapp2.1\FundooNotes.RazorTargetAssemblyInfo.cache

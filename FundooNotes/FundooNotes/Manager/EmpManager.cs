@@ -20,9 +20,9 @@ namespace FundooNotes.Manager
            return this.employeeRepository.deleteEmployee(email);
         }
 
-        public bool readEmployee()
+        public bool readEmployee(string email)
         {
-             return this.employeeRepository.readEmployee();
+             return this.employeeRepository.readEmployee(email);
         }
 
         public bool updateEmployee(Employee employee)

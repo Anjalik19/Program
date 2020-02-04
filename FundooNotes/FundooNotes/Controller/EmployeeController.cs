@@ -59,5 +59,20 @@ namespace FundooNotes.Controller
             }
         }
 
+        [HttpGet]
+        [Route("read")]
+        public IActionResult readEmployee(string email)
+        {
+            var result = this.mgr.readEmployee(email);
+            if (result)
+            {
+                return this.Ok(result);
+            }
+            else
+            {
+                return this.BadRequest("Error while reading data");
+            }
+        }
+
     }
 }
