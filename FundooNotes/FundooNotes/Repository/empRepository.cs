@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 
 
-
 namespace FundooNotes.Repository
 {
     [System.Runtime.InteropServices.Guid("7093D524-7A48-4A0B-9117-6F1B1BA79F25")]
